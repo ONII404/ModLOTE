@@ -1,5 +1,12 @@
 package com.onnx.lirufiru.app.components;
 
+/**
+ * @deprecated
+ *  Clase en desuso que contiene las funciones a utilizar en el programa para rezolver los diferentes metodos
+ * 
+ * 
+ */
+
 import java.lang.Math;
 
 public class utils {
@@ -54,7 +61,7 @@ public class utils {
 
     /**
      * 
-     * @param Z Valor de Z
+     * @param Z     Valor de Z
      * @param sig_L Sigma o SigmaL
      * @return
      */

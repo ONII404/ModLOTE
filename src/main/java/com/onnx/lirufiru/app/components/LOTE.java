@@ -1,5 +1,9 @@
 package com.onnx.lirufiru.app.components;
 
+
+/**
+ *  Clase abstracta que define los metodos a implementar en las clases que heredan de ella
+ */
 public abstract class LOTE {
     
     double d, s, h, q, t;
