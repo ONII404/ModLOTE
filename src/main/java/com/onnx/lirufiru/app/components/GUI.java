@@ -1101,7 +1101,15 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_tftActionPerformed
 
     private void cbSelCPOQActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSelCPOQActionPerformed
-        // TODO add your handling code here:
+        if (cbSelCPOQ.isSelected()) {
+            tfZ.setEditable(true);
+            tfSigma.setEditable(true);
+            tfL.setEditable(true);
+        } else {
+           tfZ.setEditable(false);
+            tfSigma.setEditable(false);
+            tfL.setEditable(false);
+        }
     }//GEN-LAST:event_cbSelCPOQActionPerformed
 
     private void tfPRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfPRActionPerformed
