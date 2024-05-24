@@ -1,10 +1,5 @@
 package com.onnx.lirufiru.app.components;
 
-/**
- * Clase que hereda del Metodo LOTE y tiene las operaciones para el calculo del
- * EOQ
- */
-
 public class EOQ {
 
     /**
@@ -18,31 +13,63 @@ public class EOQ {
      * D = Demanda Anual de unidades
      * S = Costo por hacer pedidos
      * N = Numero de pedidos al año
+     * t = Tiempo de ciclo/entrega
      * 
+     * L = Tiempo de Espera
+     * R = Punto de reorden
      * 
-     * 
-     * 
-     * 
-     * 
-     * q = Cantidad optima de pedido Diaria
-     * s = Costo de pedido
-     * h = Costo de mantenimiento/almacenamiento
-     * d = Demanda
-     * L = Tiempo de pedido/entrega Anual
-     * 
-     * 
-     * T = Tiempo de pedido/entrega Anual
-     * t = Tiempo de pedido/entrega
-     * 
-     * n = Numero de pedidos
-     * z = Costo total de pedido
-     * l = Costo total de mantenimiento
-     * pr = Punto de reorden
      * 
      */
 
-    double C, Q, H, D, S, N;
-    double q, h, d, L, T, t, n, z, l, pr, sig, sigL;
+    public double C, Q, S;
+    // Variables Diarias
+    public double d, h;
+    // Variables Anuales
+    public double H, D, N, t;
+
+    //
+    double q, L, T, n, z, l, pr, sig, sigL;
+
+    // Constructor EOQ sin Q
+    public EOQ(double D, int tD, double S, double H, int tH) {
+
+        this.S = S;
+
+        // Seteo de D y d
+        switch (tD) {
+            case 1: // Diario
+                this.d = D;
+                this.D = D * 365;
+                break;
+
+            case 2: // Anual
+                this.D = D;
+                this.d = D / 365;
+                break;
+        }
+
+        // Seteo de H y h
+        switch (tH) {
+            case 1: // Diario
+                this.h = H;
+                this.H = H * 365;
+                break;
+
+            case 2: // Anual
+                this.H = H;
+                this.h = H / 365;
+                break;
+        }
+
+        // Calculo de Q
+        getQ();
+
+        getT();
+
+        // Seteo de N
+        getN();
+
+    }
 
     /***
      * 
@@ -53,27 +80,22 @@ public class EOQ {
      * 
      */
 
-
-    
-
-    // Calculo del Coste Anual por Mantenimiento
-    double getHAnual(double Q, double H) {
-        return (H * Q / 2);
+    // Calculo de la cantidad optima de pedido
+    void getQ() {
+        this.Q = Math.sqrt(((2 * S * D) / H));
     }
 
-    // Calculo del Coste Anual por hacer pedidos
-    double getSAnual(double D, double S) {
-        return (S * D);
+    // Calculo del numero de pedidos al año
+    void getN() {
+        this.N = D / Q;
+    }
+
+    void getT() {
+        this.t = Q / d;
     }
 
     // Calculo del Coste total
     double getCT(double Q, double D, double S, double H) {
         return (S * D / Q) + (H * Q / 2);
     }
-
-    // Calculo de la cantidad optima de pedido
-    double getQ(double S, double D, double H) {
-        return Math.sqrt(((2 * S * D) / H));
-    }
-
 }
