@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.onnx.lirufiru</groupId>
     <artifactId>ModLOTE</artifactId>
-    <version>0.1</version>
+    <version>0.5</version>
     <packaging>jar</packaging>
     <dependencies>
         <dependency>
