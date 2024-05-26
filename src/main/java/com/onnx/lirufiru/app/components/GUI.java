@@ -1264,7 +1264,28 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_tfC2ActionPerformed
 
     private void btnClsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClsActionPerformed
-        // TODO add your handling code here:
+        // limpieza de todos los textfields
+
+        tfQ.setText("");
+        tfD.setText("");
+        tfS.setText("");
+        tfH.setText("");
+        tfL.setText("");
+        tfZ.setText("");
+        tfSigma.setText("");
+        tfT.setText("");
+        tfPOQ.setText("");
+        tfPR.setText("");
+        tfCT.setText("");
+        tfB.setText("");
+        tfN.setText("");
+        tfSigmaL.setText("");
+        cbSelCPOQ.setSelected(false);
+        cbQ.setSelected(false);
+        
+
+
+
     }//GEN-LAST:event_btnClsActionPerformed
 
     private void btnCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalculateActionPerformed
