@@ -54,7 +54,9 @@ public class GUI extends javax.swing.JFrame {
         jlPOQ2 = new javax.swing.JLabel();
         jlB = new javax.swing.JLabel();
         tfB = new javax.swing.JTextField();
-        jlN2 = new javax.swing.JLabel();
+        jln = new javax.swing.JLabel();
+        tfn = new javax.swing.JTextField();
+        jlSigmaL = new javax.swing.JLabel();
         tfSigmaL = new javax.swing.JTextField();
         jSeparator2 = new javax.swing.JSeparator();
         jlZ = new javax.swing.JLabel();
@@ -267,10 +269,24 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        jlN2.setText("σL :");
-        jlN2.setMaximumSize(new java.awt.Dimension(80, 16));
-        jlN2.setMinimumSize(new java.awt.Dimension(80, 16));
-        jlN2.setPreferredSize(new java.awt.Dimension(80, 16));
+        jln.setText("n :");
+        jln.setMaximumSize(new java.awt.Dimension(80, 16));
+        jln.setMinimumSize(new java.awt.Dimension(80, 16));
+        jln.setPreferredSize(new java.awt.Dimension(80, 16));
+
+        tfn.setEditable(false);
+        tfn.setMinimumSize(new java.awt.Dimension(60, 20));
+        tfn.setPreferredSize(new java.awt.Dimension(70, 25));
+        tfn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfnActionPerformed(evt);
+            }
+        });
+
+        jlSigmaL.setText("σL :");
+        jlSigmaL.setMaximumSize(new java.awt.Dimension(80, 16));
+        jlSigmaL.setMinimumSize(new java.awt.Dimension(80, 16));
+        jlSigmaL.setPreferredSize(new java.awt.Dimension(80, 16));
 
         tfSigmaL.setEditable(false);
         tfSigmaL.setMinimumSize(new java.awt.Dimension(60, 20));
@@ -285,38 +301,43 @@ public class GUI extends javax.swing.JFrame {
         jpPOQ1.setLayout(jpPOQ1Layout);
         jpPOQ1Layout.setHorizontalGroup(
             jpPOQ1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpPOQ1Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(jpPOQ1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jpPOQ1Layout.createSequentialGroup()
-                        .addComponent(jlCT, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfCT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jpPOQ1Layout.createSequentialGroup()
-                        .addComponent(jlPOQ2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfPOQ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jpPOQ1Layout.createSequentialGroup()
-                        .addComponent(jlN, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jpPOQ1Layout.createSequentialGroup()
-                        .addComponent(jlPR, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfPR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpPOQ1Layout.createSequentialGroup()
-                        .addComponent(jlB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jpPOQ1Layout.createSequentialGroup()
-                        .addComponent(jlN2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfSigmaL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(21, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpPOQ1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnCls)
                 .addGap(57, 57, 57))
+            .addGroup(jpPOQ1Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(jpPOQ1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpPOQ1Layout.createSequentialGroup()
+                        .addComponent(jlSigmaL, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tfSigmaL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jpPOQ1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jpPOQ1Layout.createSequentialGroup()
+                            .addComponent(jlCT, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(tfCT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jpPOQ1Layout.createSequentialGroup()
+                            .addComponent(jlPOQ2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(tfPOQ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jpPOQ1Layout.createSequentialGroup()
+                            .addComponent(jlN, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(tfN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jpPOQ1Layout.createSequentialGroup()
+                            .addComponent(jlPR, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(tfPR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpPOQ1Layout.createSequentialGroup()
+                            .addComponent(jlB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(tfB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jpPOQ1Layout.createSequentialGroup()
+                            .addComponent(jln, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(tfn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
         jpPOQ1Layout.setVerticalGroup(
             jpPOQ1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -343,7 +364,11 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(tfN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jpPOQ1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlN2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jln, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jpPOQ1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlSigmaL, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfSigmaL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnCls)
@@ -1229,11 +1254,18 @@ public class GUI extends javax.swing.JFrame {
         tfCT.setText("");
         tfB.setText("");
         tfN.setText("");
+        tfn.setText("");
         tfSigmaL.setText("");
+
+        tfZ.setEditable(false);
+        tfSigma.setEditable(false);
+        tfT.setEditable(false);
+        tfD.setEditable(true);
+        tfS.setEditable(true);
+        tfH.setEditable(true);
+        tfQ.setEditable(false);
         cbSelCPOQ.setSelected(false);
         cbQ.setSelected(false);
-        
-
 
 
     }//GEN-LAST:event_btnClsActionPerformed
@@ -1241,7 +1273,6 @@ public class GUI extends javax.swing.JFrame {
     private void btnCalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalActionPerformed
 
         EOQ eoq;
-        
 
         // Validacion para EOQ simple
         if (!cbSelCPOQ.isSelected()) {
@@ -1294,11 +1325,12 @@ public class GUI extends javax.swing.JFrame {
             tfPOQ.setText(dF.format(eoq.Q));
             tfCT.setText(dF.format(eoq.C));
             tfPR.setText(dF.format(eoq.R));
-            
+
             tfN.setText(dF.format(eoq.N));
+            tfn.setText("" + eoq.n);
 
         } else {
-            
+
             qTx = Double.parseDouble(tfQ.getText());
             lTx = Double.parseDouble(tfL.getText());
             zTx = Double.parseDouble(tfZ.getText());
@@ -1310,8 +1342,10 @@ public class GUI extends javax.swing.JFrame {
             tfPOQ.setText(dF.format(eoq.Q));
             tfPR.setText(dF.format(eoq.R));
             tfCT.setText(dF.format(eoq.C));
-            
+
             tfB.setText(dF.format(eoq.B));
+            tfN.setText(dF.format(eoq.N));
+            tfn.setText("" + eoq.n);
             tfSigmaL.setText(dF.format(eoq.SigmaL));
 
         }
@@ -1359,9 +1393,9 @@ public class GUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tfBActionPerformed
 
-    private void tfSigmaLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSigmaLActionPerformed
+    private void tfnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfSigmaLActionPerformed
+    }//GEN-LAST:event_tfnActionPerformed
 
     private void tfSigmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSigmaActionPerformed
         // TODO add your handling code here:
@@ -1395,7 +1429,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_tfH2ActionPerformed
 
     private void cbH2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbH2ActionPerformed
-                switch (cbH2.getSelectedIndex()) {
+        switch (cbH2.getSelectedIndex()) {
             case 0:
                 tH = 1;
                 break;
@@ -1411,7 +1445,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_cbH2ActionPerformed
 
     private void btnCal2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCal2ActionPerformed
-        
+
         // validar que los campos no esten vacios
         if (tfD2.getText().isEmpty() || tfS2.getText().isEmpty() || tfH2.getText().isEmpty() || tfA.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Por favor, llene todos los campos");
@@ -1435,7 +1469,7 @@ public class GUI extends javax.swing.JFrame {
         tfT2.setText(dF.format(els.t));
         tft1.setText(dF.format(els.t1));
         tft2.setText(dF.format(els.t2));
-   
+
 
     }//GEN-LAST:event_btnCal2ActionPerformed
 
@@ -1470,6 +1504,10 @@ public class GUI extends javax.swing.JFrame {
     private void tfAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfAActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tfAActionPerformed
+
+    private void tfSigmaLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSigmaLActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfSigmaLActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCal;
@@ -1507,7 +1545,6 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jlH3;
     private javax.swing.JLabel jlL;
     private javax.swing.JLabel jlN;
-    private javax.swing.JLabel jlN2;
     private javax.swing.JLabel jlN3;
     private javax.swing.JLabel jlN4;
     private javax.swing.JLabel jlPOQ2;
@@ -1519,10 +1556,12 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jlS2;
     private javax.swing.JLabel jlS3;
     private javax.swing.JLabel jlSigma;
+    private javax.swing.JLabel jlSigmaL;
     private javax.swing.JLabel jlSm;
     private javax.swing.JLabel jlT;
     private javax.swing.JLabel jlT2;
     private javax.swing.JLabel jlZ;
+    private javax.swing.JLabel jln;
     private javax.swing.JLabel jlq;
     private javax.swing.JLabel jlqDes;
     private javax.swing.JPanel jpPOQ1;
@@ -1561,6 +1600,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JTextField tfT;
     private javax.swing.JTextField tfT2;
     private javax.swing.JTextField tfZ;
+    private javax.swing.JTextField tfn;
     private javax.swing.JTextField tfq;
     private javax.swing.JTextField tfqDes;
     private javax.swing.JTextField tft1;

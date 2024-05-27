@@ -2,27 +2,7 @@ package com.onnx.lirufiru.app.components;
 
 public class EOQ {
 
-    /**
-     * Modelo de Produccion EOQ en gestion de inventarios
-     * 
-     * -- Variables a utilizar en el calculo del EOQ --
-     * 
-     * C = Costo Total Anual
-     * Q = Cantidad optima de pedido/lote
-     * H = Costo de mantenimiento/alacenamiento Anual por unidad %
-     * D = Demanda Anual de unidades
-     * S = Costo por hacer pedidos
-     * N = Numero de pedidos al año
-     * t = Tiempo de ciclo en dias
-     * L = Tiempo de Entrega en Dias
-     * R = Punto de reorden
-     * Sigma = Desviacion estandar de la demanda
-     * Z = Nivel de servicio
-     * B = Factor de seguridad
-     * SigmaL = Desviacion estandar del tiempo de entrega
-     * 
-     */
-
+    // Variables a utilizar en el cálculo del EOQ
     public double C, Q, S, R, L, n, Z, B, Sigma, SigmaL;
     // Variables Diarias
     public double d, h;
@@ -31,7 +11,6 @@ public class EOQ {
 
     // Constructor EOQ con demanda constante
     public EOQ(double D, int tD, double S, double H, int tH, double L) {
-
         this.S = S;
         this.L = L;
 
@@ -41,7 +20,6 @@ public class EOQ {
                 this.d = D;
                 this.D = D * 365;
                 break;
-
             case 2: // Anual
                 this.D = D;
                 this.d = D / 365;
@@ -54,29 +32,27 @@ public class EOQ {
                 this.h = H;
                 this.H = H * 365;
                 break;
-
             case 2: // Anual
                 this.H = H;
                 this.h = H / 365;
                 break;
         }
 
-        // Calculo de Q
-        getQ();
+        // Calcular Q, t, N, R y C
+        calcularQ();
+        calcularT();
+        calcularN();
+        calcularR();
+        calcularC();
 
-        getT();
+        System.out.println("valor de L: " + L);
+        System.out.println("valor de t: " + t);
+        System.out.println("valor de R: " + R);
 
-        // Seteo de N
-        getN();
-
-        // Seteo de R
-        getR();
-
-        getCT();
-
+        mostrarResultados();
     }
 
-    // Constructor EOQ con demanda Variable
+    // Constructor EOQ con demanda variable
     public EOQ(double Q, double L, double Z, double Sigma, double t) {
 
         this.Q = Q;
@@ -85,60 +61,96 @@ public class EOQ {
         this.t = t;
         this.Sigma = Sigma;
 
-        getn();
-        getSigmaL();
-        getSS();
-        getN();
+        System.out.println("valor de L: " + L);
+        System.out.println("valor de t: " + t);
 
-        this.Q = +B;
+        calcularn();
+        calcularSigmaL();
+        calcularB();
+        calculard();
+        calcularR();
+        calcularN();
+        calcularC();
+
+        this.Q += B;
+        mostrarResultadosDemandaVariable();
 
     }
 
-    // Calculo de la cantidad optima de pedido
-    void getQ() {
-        this.Q = Math.sqrt(((2 * S * D) / H));
+    // Calcular la cantidad óptima de pedido
+    void calcularQ() {
+        this.Q = Math.sqrt((2 * S * D) / H);
     }
 
-    // Calculo del numero de pedidos al año
-    void getN() {
+    // Calcular el número de pedidos al año
+    void calcularN() {
         this.N = D / Q;
     }
 
-    // Calculo del tiempo de ciclo
-    void getT() {
+    // Calcular el tiempo de ciclo
+    void calcularT() {
         this.t = Q / d;
     }
 
-    // Calculo de n
-    void getn() {
-        this.n = L / t;
+    // Calcular el punto de reorden
+    void calcularR() {
+        if (L > t) {
+            calcularn();
+            this.R = d * (L - (n * t));
+        } else {
+            this.R = d * L;
+        }
     }
 
-    // Calculo del punto de reorden
-    void getR() {
-        this.R = d * L;
-    }
-
-    // Calculo del Coste total
-    void getCT() {
+    // Calcular el coste total anual
+    void calcularC() {
         this.C = (S * D / Q) + (H * Q / 2);
     }
 
-    // Calculo de SigmaL
-    void getSigmaL() {
+    // Calcular n
+    void calcularn() {
+        this.n = Math.floor(L / t);
+    }
 
+    // Calcular SigmaL
+    void calcularSigmaL() {
         if (L > t) {
-            this.SigmaL = Math.sqrt((L - (n * t)) * Math.pow(Sigma, B));
+            this.SigmaL = Math.sqrt((L - (n * t)) * Math.pow(Sigma, 2));
         } else {
             this.SigmaL = Math.sqrt(L * Math.pow(Sigma, 2));
         }
     }
 
-    // Calculo del Stock de Seguridad
-    void getSS() {
-
+    // Calcular el stock de seguridad
+    void calcularB() {
         this.B = Z * SigmaL;
-
     }
 
+    // Calcular demanda diaria
+    void calculard() {
+        this.d = Q / t;
+        this.D = d * 365;
+    }
+
+    // Mostrar resultados para demanda constante
+    void mostrarResultados() {
+        System.out.println("Cantidad Optima de Pedido (Q): " + Q);
+        System.out.println("Tiempo de Ciclo (t): " + t);
+        System.out.println("Número de Pedidos al Año (N): " + N);
+        System.out.println("Punto de Reorden (R): " + R);
+        System.out.println("Costo Total Anual (C): " + C);
+    }
+
+    // Mostrar resultados para demanda variable
+    void mostrarResultadosDemandaVariable() {
+        System.out.println("Cantidad Optima de Pedido (Q): " + Q);
+        System.out.println("Stock de Seguridad (B): " + B);
+        System.out.println("Punto de Reorden (R): " + R);
+        System.out.println("Tiempo de Ciclo (t): " + t);
+        System.out.println("Número de Pedidos al Año (N): " + N);
+        System.out.println("Costo Total Anual (C): " + C);
+        System.out.println("SigmaL: " + SigmaL);
+        System.out.println("n: " + n);
+
+    }
 }
