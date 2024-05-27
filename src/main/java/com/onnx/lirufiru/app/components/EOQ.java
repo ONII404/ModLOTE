@@ -3,9 +3,9 @@ package com.onnx.lirufiru.app.components;
 public class EOQ {
 
     /**
-     * Variables a utilizar en el calculo del EOQ
+     * Modelo de Produccion EOQ en gestion de inventarios
      * 
-     * -- Posible cambio a una clase Padre --
+     * -- Variables a utilizar en el calculo del EOQ --
      * 
      * C = Costo Total Anual
      * Q = Cantidad optima de pedido/lote
@@ -15,14 +15,11 @@ public class EOQ {
      * N = Numero de pedidos al año
      * t = Tiempo de ciclo en dias
      * L = Tiempo de Entrega en Dias
-     * 
      * R = Punto de reorden
-     * 
      * Sigma = Desviacion estandar de la demanda
      * Z = Nivel de servicio
      * B = Factor de seguridad
      * SigmaL = Desviacion estandar del tiempo de entrega
-     * 
      * 
      */
 
@@ -88,33 +85,14 @@ public class EOQ {
         this.t = t;
         this.Sigma = Sigma;
 
-
         getn();
         getSigmaL();
         getSS();
+        getN();
 
-        this.Q =+ B;
-
-        // // Seteo de N
-        // getN();
-        // // Seteo de R
-        // getR();
-
-        // getCT();
-
-
-
+        this.Q = +B;
 
     }
-
-    /***
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     */
 
     // Calculo de la cantidad optima de pedido
     void getQ() {
