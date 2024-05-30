@@ -123,6 +123,7 @@ public class GUI extends javax.swing.JFrame {
         tfC2 = new javax.swing.JTextField();
         jlq = new javax.swing.JLabel();
         tfq = new javax.swing.JTextField();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -1079,6 +1080,19 @@ public class GUI extends javax.swing.JFrame {
 
         mPanel.addTab("Descuento. (EOQ)", jPanel1);
 
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 648, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 388, Short.MAX_VALUE)
+        );
+
+        mPanel.addTab("tab4", jPanel2);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -1093,72 +1107,177 @@ public class GUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void tfQActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfQActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfQActionPerformed
-
     private void Var1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Var1ActionPerformed
         // TODO add your handling code here:
 
     }//GEN-LAST:event_Var1ActionPerformed
 
-    private void cbQActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbQActionPerformed
+    private void tfqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfqActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfqActionPerformed
 
-        if (!cbQ.isSelected()) {
+    private void tfC2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfC2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfC2ActionPerformed
 
-            tfQ.setEditable(false);
-            tfT.setEditable(false);
+    private void tfC1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfC1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfC1ActionPerformed
 
-            tfD.setEditable(true);
-            tfS.setEditable(true);
-            tfH.setEditable(true);
+    private void tfqDesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfqDesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfqDesActionPerformed
 
-        } else {
+    private void tfPOQDesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfPOQDesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfPOQDesActionPerformed
 
-            tfQ.setEditable(true);
+    private void tfCT33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfCT33ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfCT33ActionPerformed
 
-            if (cbSelCPOQ.isSelected()) {
+    private void tfH3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfH3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfH3ActionPerformed
 
-                tfT.setEditable(true);
-                tfD.setEditable(false);
-                tfS.setEditable(false);
-                tfH.setEditable(false);
+    private void tfS9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfS9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfS9ActionPerformed
 
-            }
+    private void tfD3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfD3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfD3ActionPerformed
+
+    private void cbQ3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbQ3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbQ3ActionPerformed
+
+    private void tfQ3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfQ3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfQ3ActionPerformed
+
+    private void tfAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfAActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfAActionPerformed
+
+    private void tft2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tft2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tft2ActionPerformed
+
+    private void tfT2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfT2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfT2ActionPerformed
+
+    private void tft1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tft1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tft1ActionPerformed
+
+    private void tfSmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSmActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfSmActionPerformed
+
+    private void tfELSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfELSActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfELSActionPerformed
+
+    private void tfCT2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfCT2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfCT2ActionPerformed
+
+    private void btnCls2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCls2ActionPerformed
+        // limpiar textfields del panel ESL
+
+        tfD2.setText("");
+        tfS2.setText("");
+        tfH2.setText("");
+        tfA.setText("");
+        tfELS.setText("");
+        tfSm.setText("");
+        tfCT2.setText("");
+        tfT2.setText("");
+        tft1.setText("");
+        tft2.setText("");
+
+    }//GEN-LAST:event_btnCls2ActionPerformed
+
+    private void btnCal2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCal2ActionPerformed
+
+        // validar que los campos no esten vacios
+        if (tfD2.getText().isEmpty() || tfS2.getText().isEmpty() || tfH2.getText().isEmpty() || tfA.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Por favor, llene todos los campos");
+            return;
+        }
+
+        // convertir los valores de los campos a double
+        dTx = Double.parseDouble(tfD2.getText());
+        sTx = Double.parseDouble(tfS2.getText());
+        hTx = Double.parseDouble(tfH2.getText());
+        aTx = Double.parseDouble(tfA.getText());
+
+        // crear un objeto de la clase ESL
+        ELS els = new ELS(dTx, tD, sTx, hTx, tH, aTx);
+
+        // mostrar los resultados en los campos correspondientes
+        tfELS.setText(dF.format(els.Q));
+        tfSm.setText(dF.format(els.Sm));
+        tfCT2.setText(dF.format(els.CT));
+
+        tfT2.setText(dF.format(els.t));
+        tft1.setText(dF.format(els.t1));
+        tft2.setText(dF.format(els.t2));
+
+    }//GEN-LAST:event_btnCal2ActionPerformed
+
+    private void cbH2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbH2ActionPerformed
+        switch (cbH2.getSelectedIndex()) {
+            case 0:
+            tH = 1;
+            break;
+
+            case 4:
+            tH = 2;
+            break;
+            default:
+            tD = 1;
+        }
+
+        System.out.println("tH: " + tH);
+    }//GEN-LAST:event_cbH2ActionPerformed
+
+    private void tfH2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfH2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfH2ActionPerformed
+
+    private void tfS2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfS2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfS2ActionPerformed
+
+    private void cbD2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbD2ActionPerformed
+        switch (cbD2.getSelectedIndex()) {
+            case 0:
+            tD = 1;
+            break;
+
+            case 4:
+            tD = 2;
+            break;
 
         }
-    }//GEN-LAST:event_cbQActionPerformed
 
-    private void tfDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfDActionPerformed
+        System.out.println("td: " + tD);
+    }//GEN-LAST:event_cbD2ActionPerformed
 
-    }//GEN-LAST:event_tfDActionPerformed
-
-    private void tfSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSActionPerformed
-
-    }//GEN-LAST:event_tfSActionPerformed
-
-    private void tfHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfHActionPerformed
-    }//GEN-LAST:event_tfHActionPerformed
-
-    private void tfNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNActionPerformed
+    private void tfD2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfD2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfNActionPerformed
+    }//GEN-LAST:event_tfD2ActionPerformed
 
-    private void tfCTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfCTActionPerformed
+    private void tfSigmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSigmaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfCTActionPerformed
+    }//GEN-LAST:event_tfSigmaActionPerformed
 
-    private void tfPOQActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfPOQActionPerformed
+    private void tfTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfTActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfPOQActionPerformed
-
-    private void tfZActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfZActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfZActionPerformed
-
-    private void tfLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfLActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfLActionPerformed
+    }//GEN-LAST:event_tfTActionPerformed
 
     private void cbSelCPOQActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSelCPOQActionPerformed
 
@@ -1187,56 +1306,43 @@ public class GUI extends javax.swing.JFrame {
             tfH.setEditable(true);
 
         }
-
     }//GEN-LAST:event_cbSelCPOQActionPerformed
+
+    private void tfLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfLActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfLActionPerformed
+
+    private void tfZActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfZActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfZActionPerformed
+
+    private void tfSigmaLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSigmaLActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfSigmaLActionPerformed
+
+    private void tfnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfnActionPerformed
+
+    private void tfBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfBActionPerformed
+
+    private void tfNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfNActionPerformed
 
     private void tfPRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfPRActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tfPRActionPerformed
 
-    private void tfQ3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfQ3ActionPerformed
+    private void tfPOQActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfPOQActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfQ3ActionPerformed
+    }//GEN-LAST:event_tfPOQActionPerformed
 
-    private void cbQ3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbQ3ActionPerformed
+    private void tfCTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfCTActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cbQ3ActionPerformed
-
-    private void tfD3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfD3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfD3ActionPerformed
-
-    private void tfS9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfS9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfS9ActionPerformed
-
-    private void tfH3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfH3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfH3ActionPerformed
-
-    private void tfCT33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfCT33ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfCT33ActionPerformed
-
-    private void tfPOQDesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfPOQDesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfPOQDesActionPerformed
-
-    private void tfqDesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfqDesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfqDesActionPerformed
-
-    private void tfC1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfC1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfC1ActionPerformed
-
-    private void tfqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfqActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfqActionPerformed
-
-    private void tfC2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfC2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfC2ActionPerformed
+    }//GEN-LAST:event_tfCTActionPerformed
 
     private void btnClsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClsActionPerformed
         // limpieza de todos los textfields
@@ -1267,7 +1373,6 @@ public class GUI extends javax.swing.JFrame {
         cbSelCPOQ.setSelected(false);
         cbQ.setSelected(false);
 
-
     }//GEN-LAST:event_btnClsActionPerformed
 
     private void btnCalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalActionPerformed
@@ -1278,7 +1383,7 @@ public class GUI extends javax.swing.JFrame {
         if (!cbSelCPOQ.isSelected()) {
 
             if (tfD.getText().isEmpty() || tfS.getText().isEmpty() || tfH.getText().isEmpty()
-                    || tfL.getText().isEmpty()) {
+                || tfL.getText().isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Por favor, llene todos los campos");
                 return;
             }
@@ -1295,8 +1400,8 @@ public class GUI extends javax.swing.JFrame {
         if (cbSelCPOQ.isSelected()) {
 
             if (tfQ.getText().isEmpty() || tfL.getText().isEmpty() || tfZ.getText().isEmpty()
-                    || tfSigma.getText().isEmpty()
-                    || tfT.getText().isEmpty()) {
+                || tfSigma.getText().isEmpty()
+                || tfT.getText().isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Por favor, llene todos los campos");
                 return;
             }
@@ -1304,7 +1409,7 @@ public class GUI extends javax.swing.JFrame {
             if (!cbQ.isSelected()) {
 
                 if (tfD.getText().isEmpty() || tfS.getText().isEmpty() || tfH.getText().isEmpty()
-                        || tfL.getText().isEmpty() || tfZ.getText().isEmpty() || tfSigma.getText().isEmpty()) {
+                    || tfL.getText().isEmpty() || tfZ.getText().isEmpty() || tfSigma.getText().isEmpty()) {
                     JOptionPane.showMessageDialog(null, "Por favor, llene todos los campos");
                     return;
 
@@ -1349,180 +1454,82 @@ public class GUI extends javax.swing.JFrame {
             tfSigmaL.setText(dF.format(eoq.SigmaL));
 
         }
-
     }//GEN-LAST:event_btnCalActionPerformed
-
-    private void cbDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbDActionPerformed
-
-        switch (cbD.getSelectedIndex()) {
-            case 0:
-                tD = 1;
-                break;
-
-            case 4:
-                tD = 2;
-                break;
-
-        }
-
-        System.out.println("td: " + tD);
-
-    }//GEN-LAST:event_cbDActionPerformed
 
     private void cbHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbHActionPerformed
         switch (cbH.getSelectedIndex()) {
             case 0:
-                tH = 1;
-                break;
+            tH = 1;
+            break;
 
             case 4:
-                tH = 2;
-                break;
+            tH = 2;
+            break;
             default:
-                tD = 1;
+            tD = 1;
         }
 
         System.out.println("tH: " + tH);
     }//GEN-LAST:event_cbHActionPerformed
 
-    private void tfTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfTActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfTActionPerformed
+    private void tfHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfHActionPerformed
 
-    private void tfBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfBActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfBActionPerformed
+    }//GEN-LAST:event_tfHActionPerformed
 
-    private void tfnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfnActionPerformed
+    private void tfSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSActionPerformed
 
-    private void tfSigmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSigmaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfSigmaActionPerformed
+    }//GEN-LAST:event_tfSActionPerformed
 
-    private void tfD2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfD2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfD2ActionPerformed
+    private void cbDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbDActionPerformed
 
-    private void cbD2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbD2ActionPerformed
-        switch (cbD2.getSelectedIndex()) {
+        switch (cbD.getSelectedIndex()) {
             case 0:
-                tD = 1;
-                break;
+            tD = 1;
+            break;
 
             case 4:
-                tD = 2;
-                break;
+            tD = 2;
+            break;
 
         }
 
         System.out.println("td: " + tD);
-    }//GEN-LAST:event_cbD2ActionPerformed
+    }//GEN-LAST:event_cbDActionPerformed
 
-    private void tfS2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfS2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfS2ActionPerformed
+    private void tfDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfDActionPerformed
 
-    private void tfH2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfH2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfH2ActionPerformed
+    }//GEN-LAST:event_tfDActionPerformed
 
-    private void cbH2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbH2ActionPerformed
-        switch (cbH2.getSelectedIndex()) {
-            case 0:
-                tH = 1;
-                break;
+    private void cbQActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbQActionPerformed
 
-            case 4:
-                tH = 2;
-                break;
-            default:
-                tD = 1;
+        if (!cbQ.isSelected()) {
+
+            tfQ.setEditable(false);
+            tfT.setEditable(false);
+
+            tfD.setEditable(true);
+            tfS.setEditable(true);
+            tfH.setEditable(true);
+
+        } else {
+
+            tfQ.setEditable(true);
+
+            if (cbSelCPOQ.isSelected()) {
+
+                tfT.setEditable(true);
+                tfD.setEditable(false);
+                tfS.setEditable(false);
+                tfH.setEditable(false);
+
+            }
+
         }
+    }//GEN-LAST:event_cbQActionPerformed
 
-        System.out.println("tH: " + tH);
-    }//GEN-LAST:event_cbH2ActionPerformed
-
-    private void btnCal2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCal2ActionPerformed
-
-        // validar que los campos no esten vacios
-        if (tfD2.getText().isEmpty() || tfS2.getText().isEmpty() || tfH2.getText().isEmpty() || tfA.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Por favor, llene todos los campos");
-            return;
-        }
-
-        // convertir los valores de los campos a double
-        dTx = Double.parseDouble(tfD2.getText());
-        sTx = Double.parseDouble(tfS2.getText());
-        hTx = Double.parseDouble(tfH2.getText());
-        aTx = Double.parseDouble(tfA.getText());
-
-        // crear un objeto de la clase ESL
-        ELS els = new ELS(dTx, tD, sTx, hTx, tH, aTx);
-
-        // mostrar los resultados en los campos correspondientes
-        tfELS.setText(dF.format(els.Q));
-        tfSm.setText(dF.format(els.Sm));
-        tfCT2.setText(dF.format(els.CT));
-
-        tfT2.setText(dF.format(els.t));
-        tft1.setText(dF.format(els.t1));
-        tft2.setText(dF.format(els.t2));
-
-
-    }//GEN-LAST:event_btnCal2ActionPerformed
-
-    private void btnCls2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCls2ActionPerformed
-        // limpiar textfields del panel ESL
-
-        tfD2.setText("");
-        tfS2.setText("");
-        tfH2.setText("");
-        tfA.setText("");
-        tfELS.setText("");
-        tfSm.setText("");
-        tfCT2.setText("");
-        tfT2.setText("");
-        tft1.setText("");
-        tft2.setText("");
-
-
-
-
-    }//GEN-LAST:event_btnCls2ActionPerformed
-
-    private void tfCT2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfCT2ActionPerformed
+    private void tfQActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfQActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfCT2ActionPerformed
-
-    private void tfELSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfELSActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfELSActionPerformed
-
-    private void tfSmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSmActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfSmActionPerformed
-
-    private void tft1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tft1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tft1ActionPerformed
-
-    private void tfT2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfT2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfT2ActionPerformed
-
-    private void tft2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tft2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tft2ActionPerformed
-
-    private void tfAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfAActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfAActionPerformed
-
-    private void tfSigmaLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSigmaLActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfSigmaLActionPerformed
+    }//GEN-LAST:event_tfQActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCal;
@@ -1541,6 +1548,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JCheckBox cbQ3;
     private javax.swing.JCheckBox cbSelCPOQ;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
