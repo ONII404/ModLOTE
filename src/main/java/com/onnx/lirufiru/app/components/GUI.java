@@ -1474,7 +1474,22 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCal2ActionPerformed
 
     private void btnCls2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCls2ActionPerformed
-        // TODO add your handling code here:
+        // limpiar textfields del panel ESL
+
+        tfD2.setText("");
+        tfS2.setText("");
+        tfH2.setText("");
+        tfA.setText("");
+        tfELS.setText("");
+        tfSm.setText("");
+        tfCT2.setText("");
+        tfT2.setText("");
+        tft1.setText("");
+        tft2.setText("");
+
+
+
+
     }//GEN-LAST:event_btnCls2ActionPerformed
 
     private void tfCT2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfCT2ActionPerformed
