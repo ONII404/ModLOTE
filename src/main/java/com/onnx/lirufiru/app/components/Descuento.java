@@ -1,13 +1,16 @@
 package com.onnx.lirufiru.app.components;
 
+import java.util.ArrayList;
+
 public class Descuento {
 
     // Variables de entrada
-    public double S, C1, C2, Qm, Qi, q, q1_1, q1_2, CTm, CTi;
+    public double S, C1, C2, Qm, q, q1_1, q1_2, CTm;
     // Variables Diarias
     public double d, h;
     // Variables Anuales
     public double H, D;
+    ArrayList<Double> CTi = new ArrayList<Double>();
 
     // Constructor EOQ con descuento
     public Descuento(double D, double S, double H, double C1, double C2, int q, int tD, int tH) {
@@ -56,7 +59,8 @@ public class Descuento {
         getCTm(C1);
 
         // Calculo de CTi Costo con descuento
-        getCTi(C2);
+        getCTi(C2, q1_1);
+        getCTi(C2, q1_2);
 
     }
 
@@ -78,8 +82,9 @@ public class Descuento {
     }
 
     // Calculo de la cantidad optima de pedido con descuento
-    void getCTi(double P) {
-        this.CTi = (S * D / Qi) + (H * Qi / 2) + (P * D);
+    void getCTi(double P, double Qi) {
+        // Añadir Costo con descuento al arrayList CTi[]
+        CTi.add((S * D / Qi) + (H * Qi / 2) + (P * D));
     }
 
     // Calculo de q1 o Q*
@@ -90,15 +95,11 @@ public class Descuento {
         if (discriminant < 0) {
             System.out.println("No hay soluciones reales para la ecuación cuadrática.");
         } else {
-            double q1_1 = (-(b) + Math.sqrt(discriminant)) / (2 * a);
+            q1_1 = (-(b) + Math.sqrt(discriminant)) / (2 * a);
 
-            double q1_2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+            q1_2 = (-b - Math.sqrt(discriminant)) / (2 * a);
             System.out.println("Soluciones de la ecuación cuadrática:");
 
-            Qi = q1_1 > q1_2 ? q1_1 : q1_2;
-
-            System.out.println("q1 = " + q1_1);
-            System.out.println("q1 = " + q1_2);
         }
     }
 
