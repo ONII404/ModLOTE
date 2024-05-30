@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Descuento {
 
     // Variables de entrada
-    public double S, C1, C2, Qm, q, q1_1, q1_2, CTm;
+    public double S, C1, C2, Qm, Qi, q, q1_1, q1_2, CTm;
     // Variables Diarias
     public double d, h;
     // Variables Anuales
@@ -59,8 +59,7 @@ public class Descuento {
         getCTm(C1);
 
         // Calculo de CTi Costo con descuento
-        getCTi(C2, q1_1);
-        getCTi(C2, q1_2);
+        getCTi(C2, Qi);
 
     }
 
@@ -83,6 +82,7 @@ public class Descuento {
 
     // Calculo de la cantidad optima de pedido con descuento
     void getCTi(double P, double Qi) {
+
         // Añadir Costo con descuento al arrayList CTi[]
         CTi.add((S * D / Qi) + (H * Qi / 2) + (P * D));
     }
@@ -96,9 +96,9 @@ public class Descuento {
             System.out.println("No hay soluciones reales para la ecuación cuadrática.");
         } else {
             q1_1 = (-(b) + Math.sqrt(discriminant)) / (2 * a);
-
             q1_2 = (-b - Math.sqrt(discriminant)) / (2 * a);
-            System.out.println("Soluciones de la ecuación cuadrática:");
+            
+            Qi = q1_1 > q1_2 ? q1_1 : q1_2;
 
         }
     }
