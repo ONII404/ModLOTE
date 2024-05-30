@@ -102,13 +102,4 @@ public class Descuento {
         }
     }
 
-    // ejecutar
-    public static void main(String[] args) {
-        Descuento descuento = new Descuento(30, 100, 0.05, 10, 8, 300, 1, 1);
-        System.out.println("Qm: " + descuento.Qm);
-        System.out.println("Qi: " + descuento.Qi);
-        System.out.println("CTm: " + descuento.CTm);
-        System.out.println("CTi: " + descuento.CTi);
-    }
-
 }
