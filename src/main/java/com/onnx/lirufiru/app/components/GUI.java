@@ -2703,6 +2703,9 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_tfZonaActionPerformed
 
     private void btnCalculate3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalculate3ActionPerformed
+        
+        
+        
         double lamTx = Double.parseDouble(tflam1.getText());
         double muTx = Double.parseDouble(tfmu1.getText());
         double cw1Tx = Double.parseDouble(tfC_W1.getText());
@@ -2710,13 +2713,13 @@ public class GUI extends javax.swing.JFrame {
 
         UnServidor uS = new UnServidor(lamTx, muTx, cw1Tx, cs1Tx);
 
-        tfRho1.setText("" + uS.rho);
-        tfP01.setText("" + uS.P0);
-        tfL1.setText("" + uS.L);
-        tfLq1.setText("" + uS.Lq);
-        tfW1.setText("" + uS.W);
-        tfWq1.setText("" + uS.Wq);
-        tfCT1.setText("" + uS.Costo_Total);
+        tfRho1.setText("" + dF.format(uS.rho));
+        tfP01.setText("" + dF.format(uS.P0));
+        tfL1.setText("" + dF.format(uS.L));
+        tfLq1.setText("" + dF.format(uS.Lq));
+        tfW1.setText("" + dF.format(uS.W));
+        tfWq1.setText("" + dF.format(uS.Wq));
+        tfCT1.setText("" + dF.format(uS.Costo_Total));
 
 // TODO add your handling code here:
     }//GEN-LAST:event_btnCalculate3ActionPerformed
