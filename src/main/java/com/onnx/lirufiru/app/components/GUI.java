@@ -2708,7 +2708,7 @@ public class GUI extends javax.swing.JFrame {
         double cw1Tx = Double.parseDouble(tfC_W1.getText());
         double cs1Tx = Double.parseDouble(tfC_S1.getText());
 
-        UnServidor uS = new UnServidor(lamTx, muTx, dTx, dTx);
+        UnServidor uS = new UnServidor(lamTx, muTx, cw1Tx, cs1Tx);
 
         tfRho1.setText("" + uS.rho);
         tfP01.setText("" + uS.P0);
