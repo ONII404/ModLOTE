@@ -1766,7 +1766,6 @@ public class GUI extends javax.swing.JFrame {
 
         mPanel.addTab("MultiplesServidores", pMultiplesServidores);
 
-        tfN1.setEditable(false);
         tfN1.setPreferredSize(new java.awt.Dimension(70, 25));
         tfN1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1775,10 +1774,14 @@ public class GUI extends javax.swing.JFrame {
         });
 
         btnCalculate5.setText("Calcular");
+        btnCalculate5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalculate5ActionPerformed(evt);
+            }
+        });
 
         jllam3.setText("Lamda:");
 
-        tflam3.setEditable(false);
         tflam3.setPreferredSize(new java.awt.Dimension(70, 25));
         tflam3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1788,7 +1791,6 @@ public class GUI extends javax.swing.JFrame {
 
         jlmu3.setText("     μ:");
 
-        tfmu3.setEditable(false);
         tfmu3.setPreferredSize(new java.awt.Dimension(70, 25));
         tfmu3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1993,7 +1995,6 @@ public class GUI extends javax.swing.JFrame {
             .addComponent(jSeparator7)
         );
 
-        tfC_W3.setEditable(false);
         tfC_W3.setPreferredSize(new java.awt.Dimension(70, 25));
         tfC_W3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2003,7 +2004,6 @@ public class GUI extends javax.swing.JFrame {
 
         jlC_S3.setText("Costo_Servicio:");
 
-        tfC_S3.setEditable(false);
         tfC_S3.setPreferredSize(new java.awt.Dimension(70, 25));
         tfC_S3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2666,7 +2666,22 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_tfmu3ActionPerformed
 
     private void btnCls5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCls5ActionPerformed
-        // TODO add your handling code here:
+
+        tflam3.setText("");
+        tfmu3.setText("");
+        tfN1.setText("");
+        tfC_W3.setText("");
+        tfC_S3.setText("");
+        tfRho3.setText("");
+        tfP3.setText("");
+        tfL3.setText("");
+        tfLq3.setText("");
+        tfW3.setText("");
+        tfWq3.setText("");
+        tfCET2.setText("");
+        tfCST2.setText("");
+        tfCT5.setText("");
+
     }//GEN-LAST:event_btnCls5ActionPerformed
 
     private void tfL3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfL3ActionPerformed
@@ -2758,6 +2773,29 @@ public class GUI extends javax.swing.JFrame {
         tfCT4.setText("" + dF.format(mS.Costo_Total));
 
     }//GEN-LAST:event_btnCalculate4ActionPerformed
+
+    private void btnCalculate5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalculate5ActionPerformed
+
+        double lamTx = Double.parseDouble(tflam3.getText());
+        double muTx = Double.parseDouble(tfmu3.getText());
+        int nTx = Integer.parseInt(tfN1.getText());
+        double cwTx = Double.parseDouble(tfC_W3.getText());
+        double csTx = Double.parseDouble(tfC_S3.getText());
+
+        FuenteFinita fF = new FuenteFinita(lamTx, muTx, nTx, cwTx, csTx);
+
+        tfRho3.setText("" + dF.format(fF.rho));
+        tfP3.setText("" + dF.format(fF.P0));
+        tfL3.setText("" + dF.format(fF.L));
+        tfLq3.setText("" + dF.format(fF.Lq));
+        tfW3.setText("" + dF.format(fF.W));
+        tfWq3.setText("" + dF.format(fF.Wq));
+        tfCET2.setText("" + dF.format(fF.Costo_Espera_Diario));
+        tfCST2.setText("" + dF.format(fF.Costo_Servicio_Diario));
+        tfCT5.setText("" + dF.format(fF.Costo_Total));
+
+
+    }//GEN-LAST:event_btnCalculate5ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCal;
