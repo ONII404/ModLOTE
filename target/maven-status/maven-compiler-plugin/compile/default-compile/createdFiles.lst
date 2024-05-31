@@ -66,6 +66,7 @@ com\onnx\lirufiru\app\components\GUI$50.class
 com\onnx\lirufiru\app\components\GUI$60.class
 com\onnx\lirufiru\app\components\GUI$70.class
 com\onnx\lirufiru\app\components\GUI$10.class
+com\onnx\lirufiru\app\components\GUI$93.class
 com\onnx\lirufiru\app\components\GUI$35.class
 com\onnx\lirufiru\app\components\GUI$55.class
 com\onnx\lirufiru\app\components\GUI$73.class
@@ -85,6 +86,7 @@ com\onnx\lirufiru\app\components\UnServidor.class
 com\onnx\lirufiru\app\components\GUI$13.class
 com\onnx\lirufiru\app\components\GUI$32.class
 com\onnx\lirufiru\app\components\GUI$42.class
+com\onnx\lirufiru\app\components\GUI$95.class
 com\onnx\lirufiru\app\components\GUI$65.class
 com\onnx\lirufiru\app\components\GUI$83.class
 com\onnx\lirufiru\app\components\GUI$25.class
@@ -95,5 +97,6 @@ com\onnx\lirufiru\app\components\GUI$77.class
 com\onnx\lirufiru\app\components\GUI.class
 com\onnx\lirufiru\app\components\GUI$31.class
 com\onnx\lirufiru\app\components\GUI$71.class
+com\onnx\lirufiru\app\components\GUI$94.class
 com\onnx\lirufiru\app\components\GUI$14.class
 com\onnx\lirufiru\app\components\GUI$49.class

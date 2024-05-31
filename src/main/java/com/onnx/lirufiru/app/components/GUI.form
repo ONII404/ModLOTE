@@ -765,7 +765,7 @@
                           <Component id="tfA" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnCal2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="29" pref="179" max="32767" attributes="0"/>
+                      <EmptySpace min="29" pref="173" max="32767" attributes="0"/>
                   </Group>
                   <Component id="jpPOQ4" alignment="1" max="32767" attributes="0"/>
                   <Component id="jSeparator5" alignment="0" max="32767" attributes="0"/>
@@ -1162,8 +1162,8 @@
         <Container class="javax.swing.JPanel" name="pEOQ">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Descuento. (EOQ)">
-                <Property name="tabTitle" type="java.lang.String" value="Descuento. (EOQ)"/>
+              <JTabbedPaneConstraints tabName="Descuento (EOQ)">
+                <Property name="tabTitle" type="java.lang.String" value="Descuento (EOQ)"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -1180,13 +1180,6 @@
                               <Component id="tfH3" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="cbH3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jlQ3" min="-2" pref="30" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="tfQ3" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="cbQ3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jlC1" min="-2" pref="30" max="-2" attributes="0"/>
@@ -1222,7 +1215,9 @@
                                       <Component id="tfC2" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="tfq1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                               <Component id="btnCalculate2" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -1236,15 +1231,7 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="cbQ3" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="jlQ3" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
-                              <Component id="tfQ3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jlD3" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
                           <Component id="tfD3" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1276,8 +1263,9 @@
                           <Component id="jlq" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
                           <Component id="tfq" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnCalculate2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tfq1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="50" pref="85" max="32767" attributes="0"/>
+                      <EmptySpace min="50" pref="79" max="32767" attributes="0"/>
                   </Group>
                   <Component id="jpPOQ3" alignment="1" max="32767" attributes="0"/>
                   <Component id="jSeparator4" alignment="0" max="32767" attributes="0"/>
@@ -1285,31 +1273,6 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jlQ3">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Q:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="tfQ3">
-              <Properties>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[70, 25]"/>
-                </Property>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfQ3ActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="cbQ3">
-              <Properties>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[25, 25]"/>
-                </Property>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbQ3ActionPerformed"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JLabel" name="jlD3">
               <Properties>
                 <Property name="text" type="java.lang.String" value="D:"/>
@@ -1403,46 +1366,61 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Calcular"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCalculate2ActionPerformed"/>
+              </Events>
             </Component>
             <Container class="javax.swing.JPanel" name="jpPOQ3">
 
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                          <Component id="btnCls3" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="jlCT6" min="-2" pref="80" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="tfCT34" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="jlQ3" min="-2" pref="30" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="tfQ3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="jlqDes" min="-2" pref="80" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="tfqDes" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                       <Group type="102" attributes="0">
                                           <Component id="jlZona" min="-2" pref="80" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="tfZona" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <Component id="jlqDes" min="-2" pref="80" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="tfqDes" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jlPOQDes" min="-2" pref="80" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="tfPOQDes" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jlCT2" min="-2" pref="80" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="tfCT33" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jlPOQDes" min="-2" pref="80" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="tfPOQDes" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jlCT2" min="-2" pref="80" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="tfCT33" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                                  <Component id="btnCls3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace pref="23" max="32767" attributes="0"/>
@@ -1452,29 +1430,39 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jlPOQDes" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="tfPOQDes" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jlCT2" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               <Component id="tfCT33" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jlPOQDes" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="tfPOQDes" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlQ3" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                              <Component id="tfQ3" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jlCT6" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="tfCT34" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jlqDes" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               <Component id="tfqDes" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jlZona" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               <Component id="tfZona" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                           <Component id="btnCls3" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="35" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1484,6 +1472,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Limpiar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCls3ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jlCT2">
                   <Properties>
@@ -1511,7 +1502,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jlPOQDes">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="POQ*:"/>
+                    <Property name="text" type="java.lang.String" value="POQ :"/>
                     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[80, 16]"/>
                     </Property>
@@ -1581,6 +1572,45 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfZonaActionPerformed"/>
                   </Events>
                 </Component>
+                <Component class="javax.swing.JTextField" name="tfQ3">
+                  <Properties>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[70, 25]"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfQ3ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jlQ3">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Q* :"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jlCT6">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Costo Total 2:"/>
+                    <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[80, 16]"/>
+                    </Property>
+                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[80, 16]"/>
+                    </Property>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[80, 16]"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="tfCT34">
+                  <Properties>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[70, 25]"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfCT34ActionPerformed"/>
+                  </Events>
+                </Component>
               </SubComponents>
             </Container>
             <Component class="javax.swing.JSeparator" name="jSeparator4">
@@ -1631,6 +1661,17 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfqActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="tfq1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="-"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[70, 25]"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfq1ActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
@@ -1807,7 +1848,7 @@
                           </Group>
                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                           <Component id="btnCls1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="52" max="32767" attributes="0"/>
+                          <EmptySpace pref="46" max="32767" attributes="0"/>
                       </Group>
                       <Component id="jSeparator3" alignment="0" max="32767" attributes="0"/>
                   </Group>
@@ -2249,7 +2290,7 @@
                               <Component id="jlCET1" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
                               <Component id="tfCET1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="12" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jlCST1" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
                               <Component id="tfCST1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2727,7 +2768,7 @@
                               <Component id="jlCET2" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
                               <Component id="tfCET2" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="12" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jlCST2" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
                               <Component id="tfCST2" alignment="3" min="-2" max="-2" attributes="0"/>

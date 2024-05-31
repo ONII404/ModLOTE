@@ -96,9 +96,6 @@ public class GUI extends javax.swing.JFrame {
         jlA = new javax.swing.JLabel();
         tfA = new javax.swing.JTextField();
         pEOQ = new javax.swing.JPanel();
-        jlQ3 = new javax.swing.JLabel();
-        tfQ3 = new javax.swing.JTextField();
-        cbQ3 = new javax.swing.JCheckBox();
         jlD3 = new javax.swing.JLabel();
         tfD3 = new javax.swing.JTextField();
         cbD3 = new javax.swing.JComboBox<>();
@@ -118,6 +115,10 @@ public class GUI extends javax.swing.JFrame {
         tfqDes = new javax.swing.JTextField();
         jlZona = new javax.swing.JLabel();
         tfZona = new javax.swing.JTextField();
+        tfQ3 = new javax.swing.JTextField();
+        jlQ3 = new javax.swing.JLabel();
+        jlCT6 = new javax.swing.JLabel();
+        tfCT34 = new javax.swing.JTextField();
         jSeparator4 = new javax.swing.JSeparator();
         jlC1 = new javax.swing.JLabel();
         tfC1 = new javax.swing.JTextField();
@@ -125,6 +126,7 @@ public class GUI extends javax.swing.JFrame {
         tfC2 = new javax.swing.JTextField();
         jlq = new javax.swing.JLabel();
         tfq = new javax.swing.JTextField();
+        tfq1 = new javax.swing.JTextField();
         pUnServidor = new javax.swing.JPanel();
         jpPOQ2 = new javax.swing.JPanel();
         btnCls1 = new javax.swing.JButton();
@@ -905,28 +907,12 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jlA, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCal2))
-                .addGap(29, 179, Short.MAX_VALUE))
+                .addGap(29, 173, Short.MAX_VALUE))
             .addComponent(jpPOQ4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jSeparator5)
         );
 
         mPanel.addTab("Producción (ESL)", pESL);
-
-        jlQ3.setText("Q:");
-
-        tfQ3.setPreferredSize(new java.awt.Dimension(70, 25));
-        tfQ3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfQ3ActionPerformed(evt);
-            }
-        });
-
-        cbQ3.setPreferredSize(new java.awt.Dimension(25, 25));
-        cbQ3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbQ3ActionPerformed(evt);
-            }
-        });
 
         jlD3.setText("D:");
 
@@ -964,8 +950,18 @@ public class GUI extends javax.swing.JFrame {
         cbH3.setPreferredSize(new java.awt.Dimension(70, 25));
 
         btnCalculate2.setText("Calcular");
+        btnCalculate2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalculate2ActionPerformed(evt);
+            }
+        });
 
         btnCls3.setText("Limpiar");
+        btnCls3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCls3ActionPerformed(evt);
+            }
+        });
 
         jlCT2.setText("Costo Total:");
         jlCT2.setMaximumSize(new java.awt.Dimension(80, 16));
@@ -979,7 +975,7 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        jlPOQDes.setText("POQ*:");
+        jlPOQDes.setText("POQ :");
         jlPOQDes.setMaximumSize(new java.awt.Dimension(80, 16));
         jlPOQDes.setMinimumSize(new java.awt.Dimension(80, 16));
         jlPOQDes.setPreferredSize(new java.awt.Dimension(80, 16));
@@ -1015,60 +1011,99 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        tfQ3.setPreferredSize(new java.awt.Dimension(70, 25));
+        tfQ3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfQ3ActionPerformed(evt);
+            }
+        });
+
+        jlQ3.setText("Q* :");
+
+        jlCT6.setText("Costo Total 2:");
+        jlCT6.setMaximumSize(new java.awt.Dimension(80, 16));
+        jlCT6.setMinimumSize(new java.awt.Dimension(80, 16));
+        jlCT6.setPreferredSize(new java.awt.Dimension(80, 16));
+
+        tfCT34.setPreferredSize(new java.awt.Dimension(70, 25));
+        tfCT34.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfCT34ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jpPOQ3Layout = new javax.swing.GroupLayout(jpPOQ3);
         jpPOQ3.setLayout(jpPOQ3Layout);
         jpPOQ3Layout.setHorizontalGroup(
             jpPOQ3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpPOQ3Layout.createSequentialGroup()
-                .addGroup(jpPOQ3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(61, 61, 61)
+                .addComponent(btnCls3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jpPOQ3Layout.createSequentialGroup()
+                .addGroup(jpPOQ3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jpPOQ3Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jpPOQ3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(jpPOQ3Layout.createSequentialGroup()
+                                .addComponent(jlCT6, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tfCT34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jpPOQ3Layout.createSequentialGroup()
+                                .addComponent(jlQ3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(tfQ3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jpPOQ3Layout.createSequentialGroup()
                         .addGap(16, 16, 16)
                         .addGroup(jpPOQ3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jpPOQ3Layout.createSequentialGroup()
+                                .addComponent(jlqDes, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tfqDes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jpPOQ3Layout.createSequentialGroup()
                                 .addComponent(jlZona, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(tfZona, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jpPOQ3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(jpPOQ3Layout.createSequentialGroup()
-                                    .addComponent(jlqDes, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(tfqDes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jpPOQ3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jpPOQ3Layout.createSequentialGroup()
-                                        .addComponent(jlPOQDes, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(tfPOQDes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jpPOQ3Layout.createSequentialGroup()
-                                        .addComponent(jlCT2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(tfCT33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                    .addGroup(jpPOQ3Layout.createSequentialGroup()
-                        .addGap(61, 61, 61)
-                        .addComponent(btnCls3)))
+                            .addGroup(jpPOQ3Layout.createSequentialGroup()
+                                .addComponent(jlPOQDes, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tfPOQDes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jpPOQ3Layout.createSequentialGroup()
+                                .addComponent(jlCT2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tfCT33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
         jpPOQ3Layout.setVerticalGroup(
             jpPOQ3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpPOQ3Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
+                .addGap(8, 8, 8)
+                .addGroup(jpPOQ3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlPOQDes, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfPOQDes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jpPOQ3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlCT2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfCT33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jpPOQ3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlPOQDes, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tfPOQDes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(jlQ3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfQ3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jpPOQ3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlCT6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfCT34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
                 .addGroup(jpPOQ3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlqDes, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfqDes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jpPOQ3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlZona, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfZona, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(46, 46, 46)
+                .addGap(70, 70, 70)
                 .addComponent(btnCls3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         jSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
@@ -1100,6 +1135,14 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        tfq1.setText("-");
+        tfq1.setPreferredSize(new java.awt.Dimension(70, 25));
+        tfq1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfq1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout pEOQLayout = new javax.swing.GroupLayout(pEOQ);
         pEOQ.setLayout(pEOQLayout);
         pEOQLayout.setHorizontalGroup(
@@ -1113,12 +1156,6 @@ public class GUI extends javax.swing.JFrame {
                         .addComponent(tfH3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(cbH3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pEOQLayout.createSequentialGroup()
-                        .addComponent(jlQ3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfQ3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(cbQ3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(pEOQLayout.createSequentialGroup()
                         .addComponent(jlC1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1145,7 +1182,9 @@ public class GUI extends javax.swing.JFrame {
                                 .addComponent(jlC2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(tfC2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(127, 127, 127)
+                        .addGap(18, 18, 18)
+                        .addComponent(tfq1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(39, 39, 39)
                         .addComponent(btnCalculate2)))
                 .addGap(102, 102, 102)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1155,13 +1194,7 @@ public class GUI extends javax.swing.JFrame {
         pEOQLayout.setVerticalGroup(
             pEOQLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pEOQLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addGroup(pEOQLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cbQ3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(pEOQLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jlQ3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(tfQ3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
+                .addGap(69, 69, 69)
                 .addGroup(pEOQLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlD3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfD3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1187,13 +1220,14 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(pEOQLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlq, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfq, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCalculate2))
-                .addGap(50, 85, Short.MAX_VALUE))
+                    .addComponent(btnCalculate2)
+                    .addComponent(tfq1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(50, 79, Short.MAX_VALUE))
             .addComponent(jpPOQ3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jSeparator4)
         );
 
-        mPanel.addTab("Descuento. (EOQ)", pEOQ);
+        mPanel.addTab("Descuento (EOQ)", pEOQ);
 
         btnCls1.setText("Limpiar");
         btnCls1.addActionListener(new java.awt.event.ActionListener() {
@@ -1343,7 +1377,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(tfCT1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(50, 50, 50)
                 .addComponent(btnCls1)
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
             .addComponent(jSeparator3)
         );
 
@@ -1657,7 +1691,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(jpPOQ5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlCET1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfCET1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jpPOQ5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlCST1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfCST1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1981,7 +2015,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(jpPOQ6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlCET2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfCET2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jpPOQ6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlCST2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfCST2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -2135,10 +2169,6 @@ public class GUI extends javax.swing.JFrame {
     private void tfD3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfD3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tfD3ActionPerformed
-
-    private void cbQ3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbQ3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbQ3ActionPerformed
 
     private void tfQ3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfQ3ActionPerformed
         // TODO add your handling code here:
@@ -2797,6 +2827,76 @@ public class GUI extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnCalculate5ActionPerformed
 
+    private void tfq1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfq1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfq1ActionPerformed
+
+    private void btnCalculate2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalculate2ActionPerformed
+
+        if (!tfq1.getText().equals("-")) {
+
+            double dTx = Double.parseDouble(tfD3.getText());
+            double sTx = Double.parseDouble(tfS9.getText());
+            double hTx = Double.parseDouble(tfH3.getText());
+            double c1Tx = Double.parseDouble(tfC1.getText());
+            double c2Tx = Double.parseDouble(tfC2.getText());
+            int qTx = Integer.parseInt(tfq.getText());
+            int q1Tx = Integer.parseInt(tfq1.getText());
+
+            Descuento desc = new Descuento(dTx, sTx, hTx, c1Tx, c2Tx, qTx, q1Tx);
+
+            tfPOQDes.setText(dF.format(desc.Qm));
+            tfCT33.setText(dF.format(desc.CTm));
+            tfQ3.setText(dF.format(desc.q));
+            tfCT34.setText(dF.format(desc.CTi1));
+            tfqDes.setText(dF.format(desc.q1));
+            tfZona.setText(dF.format(desc.zona));
+
+        } else {
+
+            double dTx = Double.parseDouble(tfD3.getText());
+            double sTx = Double.parseDouble(tfS9.getText());
+            double hTx = Double.parseDouble(tfH3.getText());
+            double c1Tx = Double.parseDouble(tfC1.getText());
+            double c2Tx = Double.parseDouble(tfC2.getText());
+            int qTx = Integer.parseInt(tfq.getText());
+            // int q1Tx = Integer.parseInt(tfq1.getText());
+
+            Descuento desc = new Descuento(dTx, sTx, hTx, c1Tx, c2Tx, qTx);
+
+            tfPOQDes.setText(dF.format(desc.Qm));
+            tfCT33.setText(dF.format(desc.CTm));
+            tfQ3.setText(dF.format(desc.q));
+            tfCT34.setText(dF.format(desc.CTi1));
+
+            tfqDes.setText(dF.format(desc.q1));
+            tfZona.setText(dF.format(desc.zona));
+        }
+
+
+    }//GEN-LAST:event_btnCalculate2ActionPerformed
+
+    private void tfCT34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfCT34ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfCT34ActionPerformed
+
+    private void btnCls3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCls3ActionPerformed
+
+        tfD3.setText("");
+        tfS9.setText("");
+        tfH3.setText("");
+        tfC1.setText("");
+        tfC2.setText("");
+        tfq.setText("");
+        tfq1.setText("-");
+        tfPOQDes.setText("");
+        tfCT33.setText("");
+        tfQ3.setText("");
+        tfCT34.setText("");
+        tfqDes.setText("");
+        tfZona.setText("");
+    }//GEN-LAST:event_btnCls3ActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCal;
     private javax.swing.JButton btnCal2;
@@ -2817,7 +2917,6 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbH2;
     private javax.swing.JComboBox<String> cbH3;
     private javax.swing.JCheckBox cbQ;
-    private javax.swing.JCheckBox cbQ3;
     private javax.swing.JCheckBox cbSelCPOQ;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
@@ -2839,6 +2938,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jlCT3;
     private javax.swing.JLabel jlCT4;
     private javax.swing.JLabel jlCT5;
+    private javax.swing.JLabel jlCT6;
     private javax.swing.JLabel jlC_S1;
     private javax.swing.JLabel jlC_S2;
     private javax.swing.JLabel jlC_S3;
@@ -2925,6 +3025,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JTextField tfCT1;
     private javax.swing.JTextField tfCT2;
     private javax.swing.JTextField tfCT33;
+    private javax.swing.JTextField tfCT34;
     private javax.swing.JTextField tfCT4;
     private javax.swing.JTextField tfCT5;
     private javax.swing.JTextField tfC_S1;
@@ -2985,6 +3086,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JTextField tfmu3;
     private javax.swing.JTextField tfn;
     private javax.swing.JTextField tfq;
+    private javax.swing.JTextField tfq1;
     private javax.swing.JTextField tfqDes;
     private javax.swing.JTextField tft1;
     private javax.swing.JTextField tft2;
