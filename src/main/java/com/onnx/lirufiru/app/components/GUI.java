@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 
 public class GUI extends javax.swing.JFrame {
 
-    DecimalFormat dF = new DecimalFormat("#.##");
+    DecimalFormat dF = new DecimalFormat("#.####");
     double dTx = 0.0, sTx = 0.0, hTx = 0.0, lTx = 0.0, zTx = 0.0, sigTx = 0.0, qTx = 0.0, tTx = 0.0, aTx = 0.0;
     int tD = 1, tH = 1;
 
@@ -1452,10 +1452,14 @@ public class GUI extends javax.swing.JFrame {
         mPanel.addTab("UnServidor", pUnServidor);
 
         btnCalculate4.setText("Calcular");
+        btnCalculate4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalculate4ActionPerformed(evt);
+            }
+        });
 
         jllam2.setText("Lamda:");
 
-        tflam2.setEditable(false);
         tflam2.setPreferredSize(new java.awt.Dimension(70, 25));
         tflam2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1465,7 +1469,6 @@ public class GUI extends javax.swing.JFrame {
 
         jlmu2.setText("     μ:");
 
-        tfmu2.setEditable(false);
         tfmu2.setPreferredSize(new java.awt.Dimension(70, 25));
         tfmu2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1670,7 +1673,6 @@ public class GUI extends javax.swing.JFrame {
 
         jlC_W2.setText("Costo_Espera_Cliente:");
 
-        tfC_W2.setEditable(false);
         tfC_W2.setPreferredSize(new java.awt.Dimension(70, 25));
         tfC_W2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1680,7 +1682,6 @@ public class GUI extends javax.swing.JFrame {
 
         jlC_S2.setText("Costo_Servicio:");
 
-        tfC_S2.setEditable(false);
         tfC_S2.setPreferredSize(new java.awt.Dimension(70, 25));
         tfC_S2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1690,7 +1691,6 @@ public class GUI extends javax.swing.JFrame {
 
         jls.setText("     s:");
 
-        tfls1.setEditable(false);
         tfls1.setPreferredSize(new java.awt.Dimension(70, 25));
         tfls1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2520,7 +2520,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_tfQActionPerformed
 
     private void btnCls1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCls1ActionPerformed
-        
+
         tflam1.setText("");
         tfmu1.setText("");
         tfC_W1.setText("");
@@ -2579,7 +2579,22 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_tfmu2ActionPerformed
 
     private void btnCls4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCls4ActionPerformed
-        // TODO add your handling code here:
+
+        tflam2.setText("");
+        tfmu2.setText("");
+        tfls1.setText("");
+        tfC_W2.setText("");
+        tfC_S2.setText("");
+        tfRho2.setText("");
+        tfP2.setText("");
+        tfL2.setText("");
+        tfLq2.setText("");
+        tfW2.setText("");
+        tfWq2.setText("");
+        tfCET1.setText("");
+        tfCST1.setText("");
+        tfCT4.setText("");
+
     }//GEN-LAST:event_btnCls4ActionPerformed
 
     private void tfL2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfL2ActionPerformed
@@ -2703,9 +2718,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_tfZonaActionPerformed
 
     private void btnCalculate3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalculate3ActionPerformed
-        
-        
-        
+
         double lamTx = Double.parseDouble(tflam1.getText());
         double muTx = Double.parseDouble(tfmu1.getText());
         double cw1Tx = Double.parseDouble(tfC_W1.getText());
@@ -2723,6 +2736,28 @@ public class GUI extends javax.swing.JFrame {
 
 // TODO add your handling code here:
     }//GEN-LAST:event_btnCalculate3ActionPerformed
+
+    private void btnCalculate4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalculate4ActionPerformed
+
+        double lamTx = Double.parseDouble(tflam2.getText());
+        double muTx = Double.parseDouble(tfmu2.getText());
+        int lsTx = Integer.parseInt(tfls1.getText());
+        double cwTx = Double.parseDouble(tfC_W2.getText());
+        double csTx = Double.parseDouble(tfC_S2.getText());
+
+        MultiplesServidores mS = new MultiplesServidores(lamTx, muTx, lsTx, cwTx, csTx);
+
+        tfRho2.setText("" + dF.format(mS.rho));
+        tfP2.setText("" + dF.format(mS.P0));
+        tfL2.setText("" + dF.format(mS.L));
+        tfLq2.setText("" + dF.format(mS.Lq));
+        tfW2.setText("" + dF.format(mS.W));
+        tfWq2.setText("" + dF.format(mS.Wq));
+        tfCET1.setText("" + dF.format(mS.Costo_Espera_Diario));
+        tfCST1.setText("" + dF.format(mS.Costo_Servicio_Diario));
+        tfCT4.setText("" + dF.format(mS.Costo_Total));
+
+    }//GEN-LAST:event_btnCalculate4ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCal;
