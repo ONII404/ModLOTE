@@ -1348,10 +1348,14 @@ public class GUI extends javax.swing.JFrame {
         );
 
         btnCalculate3.setText("Calcular");
+        btnCalculate3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalculate3ActionPerformed(evt);
+            }
+        });
 
         jllam1.setText("Lamda:");
 
-        tflam1.setEditable(false);
         tflam1.setPreferredSize(new java.awt.Dimension(70, 25));
         tflam1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1361,7 +1365,6 @@ public class GUI extends javax.swing.JFrame {
 
         jlmu1.setText("     μ:");
 
-        tfmu1.setEditable(false);
         tfmu1.setPreferredSize(new java.awt.Dimension(70, 25));
         tfmu1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1371,7 +1374,6 @@ public class GUI extends javax.swing.JFrame {
 
         jlC_W1.setText("Costo_Espera_Cliente:");
 
-        tfC_W1.setEditable(false);
         tfC_W1.setPreferredSize(new java.awt.Dimension(70, 25));
         tfC_W1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1381,7 +1383,6 @@ public class GUI extends javax.swing.JFrame {
 
         jlC_S1.setText("     Costo_Servicio:");
 
-        tfC_S1.setEditable(false);
         tfC_S1.setPreferredSize(new java.awt.Dimension(70, 25));
         tfC_S1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2218,14 +2219,14 @@ public class GUI extends javax.swing.JFrame {
     private void cbH2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbH2ActionPerformed
         switch (cbH2.getSelectedIndex()) {
             case 0:
-            tH = 1;
-            break;
+                tH = 1;
+                break;
 
             case 4:
-            tH = 2;
-            break;
+                tH = 2;
+                break;
             default:
-            tD = 1;
+                tD = 1;
         }
 
         System.out.println("tH: " + tH);
@@ -2242,12 +2243,12 @@ public class GUI extends javax.swing.JFrame {
     private void cbD2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbD2ActionPerformed
         switch (cbD2.getSelectedIndex()) {
             case 0:
-            tD = 1;
-            break;
+                tD = 1;
+                break;
 
             case 4:
-            tD = 2;
-            break;
+                tD = 2;
+                break;
 
         }
 
@@ -2370,7 +2371,7 @@ public class GUI extends javax.swing.JFrame {
         if (!cbSelCPOQ.isSelected()) {
 
             if (tfD.getText().isEmpty() || tfS.getText().isEmpty() || tfH.getText().isEmpty()
-                || tfL.getText().isEmpty()) {
+                    || tfL.getText().isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Por favor, llene todos los campos");
                 return;
             }
@@ -2387,8 +2388,8 @@ public class GUI extends javax.swing.JFrame {
         if (cbSelCPOQ.isSelected()) {
 
             if (tfQ.getText().isEmpty() || tfL.getText().isEmpty() || tfZ.getText().isEmpty()
-                || tfSigma.getText().isEmpty()
-                || tfT.getText().isEmpty()) {
+                    || tfSigma.getText().isEmpty()
+                    || tfT.getText().isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Por favor, llene todos los campos");
                 return;
             }
@@ -2396,7 +2397,7 @@ public class GUI extends javax.swing.JFrame {
             if (!cbQ.isSelected()) {
 
                 if (tfD.getText().isEmpty() || tfS.getText().isEmpty() || tfH.getText().isEmpty()
-                    || tfL.getText().isEmpty() || tfZ.getText().isEmpty() || tfSigma.getText().isEmpty()) {
+                        || tfL.getText().isEmpty() || tfZ.getText().isEmpty() || tfSigma.getText().isEmpty()) {
                     JOptionPane.showMessageDialog(null, "Por favor, llene todos los campos");
                     return;
 
@@ -2446,14 +2447,14 @@ public class GUI extends javax.swing.JFrame {
     private void cbHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbHActionPerformed
         switch (cbH.getSelectedIndex()) {
             case 0:
-            tH = 1;
-            break;
+                tH = 1;
+                break;
 
             case 4:
-            tH = 2;
-            break;
+                tH = 2;
+                break;
             default:
-            tD = 1;
+                tD = 1;
         }
 
         System.out.println("tH: " + tH);
@@ -2471,12 +2472,12 @@ public class GUI extends javax.swing.JFrame {
 
         switch (cbD.getSelectedIndex()) {
             case 0:
-            tD = 1;
-            break;
+                tD = 1;
+                break;
 
             case 4:
-            tD = 2;
-            break;
+                tD = 2;
+                break;
 
         }
 
@@ -2519,7 +2520,18 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_tfQActionPerformed
 
     private void btnCls1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCls1ActionPerformed
-        // TODO add your handling code here:
+        
+        tflam1.setText("");
+        tfmu1.setText("");
+        tfC_W1.setText("");
+        tfC_S1.setText("");
+        tfRho1.setText("");
+        tfP01.setText("");
+        tfL1.setText("");
+        tfLq1.setText("");
+        tfW1.setText("");
+        tfWq1.setText("");
+        tfCT1.setText("");
     }//GEN-LAST:event_btnCls1ActionPerformed
 
     private void tfRho1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfRho1ActionPerformed
@@ -2689,6 +2701,25 @@ public class GUI extends javax.swing.JFrame {
     private void tfZonaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfZonaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tfZonaActionPerformed
+
+    private void btnCalculate3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalculate3ActionPerformed
+        double lamTx = Double.parseDouble(tflam1.getText());
+        double muTx = Double.parseDouble(tfmu1.getText());
+        double cw1Tx = Double.parseDouble(tfC_W1.getText());
+        double cs1Tx = Double.parseDouble(tfC_S1.getText());
+
+        UnServidor uS = new UnServidor(lamTx, muTx, dTx, dTx);
+
+        tfRho1.setText("" + uS.rho);
+        tfP01.setText("" + uS.P0);
+        tfL1.setText("" + uS.L);
+        tfLq1.setText("" + uS.Lq);
+        tfW1.setText("" + uS.W);
+        tfWq1.setText("" + uS.Wq);
+        tfCT1.setText("" + uS.Costo_Total);
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_btnCalculate3ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCal;
