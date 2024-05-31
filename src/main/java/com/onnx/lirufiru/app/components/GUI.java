@@ -1798,7 +1798,7 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        jlC_W3.setText("Costo_Espera_Cliente:");
+        jlC_W3.setText("Costo_Servicio.");
 
         btnCls5.setText("Limpiar");
         btnCls5.addActionListener(new java.awt.event.ActionListener() {
@@ -2002,7 +2002,7 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        jlC_S3.setText("Costo_Servicio:");
+        jlC_S3.setText("Costo_Espera_Cliente:");
 
         tfC_S3.setPreferredSize(new java.awt.Dimension(70, 25));
         tfC_S3.addActionListener(new java.awt.event.ActionListener() {
@@ -2021,14 +2021,11 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(pFuenteFinitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pFuenteFinitaLayout.createSequentialGroup()
                         .addGap(0, 311, Short.MAX_VALUE)
-                        .addComponent(btnCalculate5))
+                        .addComponent(btnCalculate5)
+                        .addGap(18, 18, 18))
                     .addGroup(pFuenteFinitaLayout.createSequentialGroup()
-                        .addGap(11, 11, 11)
+                        .addGap(16, 16, 16)
                         .addGroup(pFuenteFinitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(pFuenteFinitaLayout.createSequentialGroup()
-                                .addComponent(jlC_S3, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tfC_S3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(pFuenteFinitaLayout.createSequentialGroup()
                                 .addComponent(jlC_W3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -2045,9 +2042,12 @@ public class GUI extends javax.swing.JFrame {
                                 .addGroup(pFuenteFinitaLayout.createSequentialGroup()
                                     .addComponent(jlmu3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(tfmu3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(18, 18, 18)
+                                    .addComponent(tfmu3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(pFuenteFinitaLayout.createSequentialGroup()
+                                .addComponent(jlC_S3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tfC_S3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(jpPOQ6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         pFuenteFinitaLayout.setVerticalGroup(
