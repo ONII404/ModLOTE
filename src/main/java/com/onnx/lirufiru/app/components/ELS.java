@@ -1,85 +1,119 @@
 package com.onnx.lirufiru.app.components;
 
+import com.onnx.lirufiru.app.components.Tiempos.TipoTiempo;
+
 public class ELS {
 
-  // Variables a utilizar en el cálculo del ELS
-  double Q, S, a, Sm, t, t1, t2, CT;
-  double D, H;
-  double d, h;
+  /*
+   * ESL - Modelo de Produccion
+   * Q: Cantidad óptima de producción
+   * S: Costo por setup
+   * D: Demanda anual o diaria
+   * H: Costo de mantener una unidad en inventario por año o día
+   * Sm: Stock máximo
+   * t: Tiempo de ciclo (en días)
+   * t1: Tiempo de producción
+   * t2: Tiempo de espera
+   * costoAnual: Costo total anual
+   * costoUnitario: Costo total unitario
+   * 
+   */
+  private double Q, S, a, Sm, t, t1, t2, costoAnual, costoUnitario;
+  private double D, H;
+  private double d, h;
 
   // Constructor ELS con demanda constante
-  public ELS(double D, int tD, double S, double H, int tH, double a) {
+  public ELS(double D, TipoTiempo tipoTiempoD, double S, double H, TipoTiempo tipoTiempoH, double a) {
     this.S = S;
     this.a = a;
 
     // Seteo de D y d
-    switch (tD) {
-      case 1: // Diario
+    switch (tipoTiempoD) {
+      case DIARIO: // Diario
         this.d = D;
         this.D = D * 365;
         break;
-      case 2: // Anual
+      case ANUAL: // Anual
         this.D = D;
         this.d = D / 365;
         break;
     }
 
     // Seteo de H y h
-    switch (tH) {
-      case 1: // Diario
+    switch (tipoTiempoH) {
+      case DIARIO: // Diario
         this.h = H;
         this.H = H * 365;
         break;
-      case 2: // Anual
+      case ANUAL: // Anual
         this.H = H;
         this.h = H / 365;
         break;
     }
 
-    // Realizar cálculos
-    calcularQ();
-    calcularT();
-    calcularT1();
-    calcularT2();
-    calcularSm();
-    calcularCT();
-    
-    // Mostrar resultados
-    mostrarResultados();
+    calcularProduccion();
   }
 
-  // Métodos de cálculo
-  void calcularQ() {
-    this.Q = Math.sqrt((2 * S * D) / (H * (1 - (d / a))));
+  private void calcularProduccion() {
+    Q = Math.sqrt((2 * S * D) / (H * (1 - (d / a))));
+    t = Q / d;
+    t1 = Q / a;
+    t2 = (Q / d) - t1;
+    Sm = Q - (t1 * d);
+    costoAnual = ((D / Q) * S) + ((Q / 2) * (1 - (d / a)) * H);
+    costoUnitario = costoAnual / 365;
   }
 
-  void calcularCT() {
-    this.CT = ((D / Q) * S) + ((Q / 2) * (1 - (d / a)) * H);
+  // getters
+  public double getQ() {
+    return Q;
   }
 
-  void calcularSm() {
-    this.Sm = Q - (t1 * d);
+  public double getS() {
+    return S;
   }
 
-  void calcularT() {
-    this.t = Q / d;
+  public double getD() {
+    return D;
   }
 
-  void calcularT1() {
-    this.t1 = Q / a;
+  public double getH() {
+    return H;
   }
 
-  void calcularT2() {
-    this.t2 = (Q / d) - t1;
+  public double getSm() {
+    return Sm;
   }
 
-  // Método para mostrar resultados
-  void mostrarResultados() {
-    System.out.println("Cantidad Optima de Pedido: " + Q);
-    System.out.println("Tiempo de Produccion: " + t);
-    System.out.println("Tiempo de Produccion y Demanda: " + t1);
-    System.out.println("Tiempo de Demanda: " + t2);
-    System.out.println("Stock Maximo: " + Sm);
-    System.out.println("Costo Total Anual: " + CT);
+  public double getT() {
+    return t;
+  }
+
+  public double getT1() {
+    return t1;
+  }
+
+  public double getT2() {
+    return t2;
+  }
+
+  public double getCostoAnual() {
+    return costoAnual;
+  }
+
+  public double getCostoUnitario() {
+    return costoUnitario;
+  }
+
+  public double getA() {
+    return a;
+  }
+
+  public double getDdiario() {
+    return d;
+  }
+
+  public double getHdiario() {
+    return h;
   }
 }

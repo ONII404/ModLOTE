@@ -83,21 +83,23 @@ public class Inventarios extends javax.swing.JFrame {
         jlH2 = new javax.swing.JLabel();
         tfH2 = new javax.swing.JTextField();
         cbH2 = new javax.swing.JComboBox<>();
-        btnCal2 = new javax.swing.JButton();
+        btnCalcularProduccion = new javax.swing.JButton();
         jpPOQ4 = new javax.swing.JPanel();
         btnCls2 = new javax.swing.JButton();
         jlCT3 = new javax.swing.JLabel();
-        tfCT2 = new javax.swing.JTextField();
+        costoAnualProduccion = new javax.swing.JTextField();
         jlN3 = new javax.swing.JLabel();
-        tfELS = new javax.swing.JTextField();
+        qProduccion = new javax.swing.JTextField();
         jlSm = new javax.swing.JLabel();
-        tfSm = new javax.swing.JTextField();
-        tft1 = new javax.swing.JTextField();
+        smProduccion = new javax.swing.JTextField();
+        t1Produccion = new javax.swing.JTextField();
         jlELS = new javax.swing.JLabel();
         jlT2 = new javax.swing.JLabel();
-        tfT2 = new javax.swing.JTextField();
+        tProduccion = new javax.swing.JTextField();
         jlN4 = new javax.swing.JLabel();
-        tft2 = new javax.swing.JTextField();
+        t2Produccion = new javax.swing.JTextField();
+        jlCT4 = new javax.swing.JLabel();
+        costoUnitarioProduccion = new javax.swing.JTextField();
         jSeparator5 = new javax.swing.JSeparator();
         jlA = new javax.swing.JLabel();
         tfA = new javax.swing.JTextField();
@@ -505,7 +507,7 @@ public class Inventarios extends javax.swing.JFrame {
                     .addGroup(pPOQLayout.createSequentialGroup()
                         .addGap(29, 29, 29)
                         .addComponent(demandaVariable, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jpPOQ1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -610,10 +612,10 @@ public class Inventarios extends javax.swing.JFrame {
             }
         });
 
-        btnCal2.setText("Calcular");
-        btnCal2.addActionListener(new java.awt.event.ActionListener() {
+        btnCalcularProduccion.setText("Calcular");
+        btnCalcularProduccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCal2ActionPerformed(evt);
+                btnCalcularProduccionActionPerformed(evt);
             }
         });
 
@@ -624,16 +626,16 @@ public class Inventarios extends javax.swing.JFrame {
             }
         });
 
-        jlCT3.setText("Costo Total :");
+        jlCT3.setText("Costo Anual");
         jlCT3.setMaximumSize(new java.awt.Dimension(80, 16));
         jlCT3.setMinimumSize(new java.awt.Dimension(80, 16));
         jlCT3.setPreferredSize(new java.awt.Dimension(80, 16));
 
-        tfCT2.setEditable(false);
-        tfCT2.setPreferredSize(new java.awt.Dimension(70, 25));
-        tfCT2.addActionListener(new java.awt.event.ActionListener() {
+        costoAnualProduccion.setEditable(false);
+        costoAnualProduccion.setPreferredSize(new java.awt.Dimension(90, 25));
+        costoAnualProduccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfCT2ActionPerformed(evt);
+                costoAnualProduccionActionPerformed(evt);
             }
         });
 
@@ -642,11 +644,11 @@ public class Inventarios extends javax.swing.JFrame {
         jlN3.setMinimumSize(new java.awt.Dimension(80, 16));
         jlN3.setPreferredSize(new java.awt.Dimension(80, 16));
 
-        tfELS.setEditable(false);
-        tfELS.setPreferredSize(new java.awt.Dimension(70, 25));
-        tfELS.addActionListener(new java.awt.event.ActionListener() {
+        qProduccion.setEditable(false);
+        qProduccion.setPreferredSize(new java.awt.Dimension(90, 25));
+        qProduccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfELSActionPerformed(evt);
+                qProduccionActionPerformed(evt);
             }
         });
 
@@ -655,24 +657,24 @@ public class Inventarios extends javax.swing.JFrame {
         jlSm.setMinimumSize(new java.awt.Dimension(80, 16));
         jlSm.setPreferredSize(new java.awt.Dimension(80, 16));
 
-        tfSm.setEditable(false);
-        tfSm.setPreferredSize(new java.awt.Dimension(70, 25));
-        tfSm.addActionListener(new java.awt.event.ActionListener() {
+        smProduccion.setEditable(false);
+        smProduccion.setPreferredSize(new java.awt.Dimension(90, 25));
+        smProduccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfSmActionPerformed(evt);
+                smProduccionActionPerformed(evt);
             }
         });
 
-        tft1.setEditable(false);
-        tft1.setMinimumSize(new java.awt.Dimension(60, 20));
-        tft1.setPreferredSize(new java.awt.Dimension(70, 25));
-        tft1.addActionListener(new java.awt.event.ActionListener() {
+        t1Produccion.setEditable(false);
+        t1Produccion.setMinimumSize(new java.awt.Dimension(60, 20));
+        t1Produccion.setPreferredSize(new java.awt.Dimension(90, 25));
+        t1Produccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tft1ActionPerformed(evt);
+                t1ProduccionActionPerformed(evt);
             }
         });
 
-        jlELS.setText("ELS :");
+        jlELS.setText("Q :");
         jlELS.setMaximumSize(new java.awt.Dimension(80, 16));
         jlELS.setMinimumSize(new java.awt.Dimension(80, 16));
         jlELS.setPreferredSize(new java.awt.Dimension(80, 16));
@@ -682,12 +684,12 @@ public class Inventarios extends javax.swing.JFrame {
         jlT2.setMinimumSize(new java.awt.Dimension(80, 16));
         jlT2.setPreferredSize(new java.awt.Dimension(80, 16));
 
-        tfT2.setEditable(false);
-        tfT2.setMinimumSize(new java.awt.Dimension(60, 20));
-        tfT2.setPreferredSize(new java.awt.Dimension(70, 25));
-        tfT2.addActionListener(new java.awt.event.ActionListener() {
+        tProduccion.setEditable(false);
+        tProduccion.setMinimumSize(new java.awt.Dimension(60, 20));
+        tProduccion.setPreferredSize(new java.awt.Dimension(90, 25));
+        tProduccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfT2ActionPerformed(evt);
+                tProduccionActionPerformed(evt);
             }
         });
 
@@ -696,12 +698,25 @@ public class Inventarios extends javax.swing.JFrame {
         jlN4.setMinimumSize(new java.awt.Dimension(80, 16));
         jlN4.setPreferredSize(new java.awt.Dimension(80, 16));
 
-        tft2.setEditable(false);
-        tft2.setMinimumSize(new java.awt.Dimension(60, 20));
-        tft2.setPreferredSize(new java.awt.Dimension(70, 25));
-        tft2.addActionListener(new java.awt.event.ActionListener() {
+        t2Produccion.setEditable(false);
+        t2Produccion.setMinimumSize(new java.awt.Dimension(60, 20));
+        t2Produccion.setPreferredSize(new java.awt.Dimension(90, 25));
+        t2Produccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tft2ActionPerformed(evt);
+                t2ProduccionActionPerformed(evt);
+            }
+        });
+
+        jlCT4.setText("Costo Diario");
+        jlCT4.setMaximumSize(new java.awt.Dimension(80, 16));
+        jlCT4.setMinimumSize(new java.awt.Dimension(80, 16));
+        jlCT4.setPreferredSize(new java.awt.Dimension(80, 16));
+
+        costoUnitarioProduccion.setEditable(false);
+        costoUnitarioProduccion.setPreferredSize(new java.awt.Dimension(90, 25));
+        costoUnitarioProduccion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                costoUnitarioProduccionActionPerformed(evt);
             }
         });
 
@@ -710,38 +725,30 @@ public class Inventarios extends javax.swing.JFrame {
         jpPOQ4Layout.setHorizontalGroup(
             jpPOQ4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpPOQ4Layout.createSequentialGroup()
+                .addContainerGap(48, Short.MAX_VALUE)
                 .addGroup(jpPOQ4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jpPOQ4Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpPOQ4Layout.createSequentialGroup()
+                        .addGroup(jpPOQ4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlSm, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlCT3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlELS, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlT2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlN3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlN4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jpPOQ4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jpPOQ4Layout.createSequentialGroup()
-                                .addComponent(jlCT3, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tfCT2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jpPOQ4Layout.createSequentialGroup()
-                                .addComponent(jlELS, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tfELS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jpPOQ4Layout.createSequentialGroup()
-                                .addComponent(jlN3, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tft1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jpPOQ4Layout.createSequentialGroup()
-                                .addComponent(jlSm, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tfSm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpPOQ4Layout.createSequentialGroup()
-                                .addComponent(jlT2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tfT2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jpPOQ4Layout.createSequentialGroup()
-                                .addComponent(jlN4, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tft2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jpPOQ4Layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(btnCls2)))
-                .addContainerGap(21, Short.MAX_VALUE))
+                            .addComponent(costoAnualProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(qProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(t1Produccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(smProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tProduccion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(t2Produccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnCls2)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpPOQ4Layout.createSequentialGroup()
+                        .addComponent(jlCT4, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(costoUnitarioProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         jpPOQ4Layout.setVerticalGroup(
             jpPOQ4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -749,30 +756,34 @@ public class Inventarios extends javax.swing.JFrame {
                 .addGap(31, 31, 31)
                 .addGroup(jpPOQ4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlELS, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tfELS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(qProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jpPOQ4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlSm, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tfSm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(smProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jpPOQ4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlCT3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tfCT2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
+                    .addComponent(costoAnualProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jpPOQ4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlCT4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(costoUnitarioProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addGroup(jpPOQ4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlT2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tfT2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jpPOQ4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlN3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tft1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(t1Produccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jpPOQ4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlN4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tft2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(t2Produccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnCls2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(80, 80, 80))
         );
 
         jSeparator5.setOrientation(javax.swing.SwingConstants.VERTICAL);
@@ -814,10 +825,10 @@ public class Inventarios extends javax.swing.JFrame {
                     .addGroup(pESLLayout.createSequentialGroup()
                         .addComponent(jlA, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(153, 153, 153)
-                        .addComponent(btnCal2)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(pESLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnCalcularProduccion)
+                            .addComponent(tfA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
                 .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jpPOQ4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -842,9 +853,10 @@ public class Inventarios extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(pESLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlA, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tfA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCal2))
-                .addGap(29, 208, Short.MAX_VALUE))
+                    .addComponent(tfA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(56, 56, 56)
+                .addComponent(btnCalcularProduccion)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jpPOQ4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jSeparator5)
         );
@@ -1123,7 +1135,7 @@ public class Inventarios extends javax.swing.JFrame {
                         .addComponent(tfq1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(39, 39, 39)
                         .addComponent(btnCalculate2)))
-                .addGap(102, 102, 102)
+                .addGap(28, 28, 28)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jpPOQ3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1229,29 +1241,29 @@ public class Inventarios extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tfAActionPerformed
 
-    private void tft2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tft2ActionPerformed
+    private void t2ProduccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t2ProduccionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tft2ActionPerformed
+    }//GEN-LAST:event_t2ProduccionActionPerformed
 
-    private void tfT2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfT2ActionPerformed
+    private void tProduccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tProduccionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfT2ActionPerformed
+    }//GEN-LAST:event_tProduccionActionPerformed
 
-    private void tft1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tft1ActionPerformed
+    private void t1ProduccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t1ProduccionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tft1ActionPerformed
+    }//GEN-LAST:event_t1ProduccionActionPerformed
 
-    private void tfSmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSmActionPerformed
+    private void smProduccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_smProduccionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfSmActionPerformed
+    }//GEN-LAST:event_smProduccionActionPerformed
 
-    private void tfELSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfELSActionPerformed
+    private void qProduccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qProduccionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfELSActionPerformed
+    }//GEN-LAST:event_qProduccionActionPerformed
 
-    private void tfCT2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfCT2ActionPerformed
+    private void costoAnualProduccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_costoAnualProduccionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfCT2ActionPerformed
+    }//GEN-LAST:event_costoAnualProduccionActionPerformed
 
     private void btnCls2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCls2ActionPerformed
         // limpiar textfields del panel ESL
@@ -1260,16 +1272,19 @@ public class Inventarios extends javax.swing.JFrame {
         tfS2.setText("");
         tfH2.setText("");
         tfA.setText("");
-        tfELS.setText("");
-        tfSm.setText("");
-        tfCT2.setText("");
-        tfT2.setText("");
-        tft1.setText("");
-        tft2.setText("");
+        qProduccion.setText("");
+        smProduccion.setText("");
+        costoAnualProduccion.setText("");
+        costoUnitarioProduccion.setText("");
+        tProduccion.setText("");
+        t1Produccion.setText("");
+        t2Produccion.setText("");
 
     }//GEN-LAST:event_btnCls2ActionPerformed
 
-    private void btnCal2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCal2ActionPerformed
+    private void btnCalcularProduccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularProduccionActionPerformed
+
+        
 
         // validar que los campos no esten vacios
         if (tfD2.getText().isEmpty() || tfS2.getText().isEmpty() || tfH2.getText().isEmpty() || tfA.getText().isEmpty()) {
@@ -1284,27 +1299,28 @@ public class Inventarios extends javax.swing.JFrame {
         Double aTx = Double.parseDouble(tfA.getText());
 
         // crear un objeto de la clase ESL
-        //ELS els = new ELS(dTx, tD, sTx, hTx, tH, aTx);
+        ELS els = new ELS(dTx, tD, sTx, hTx, tH, aTx);
 
         // mostrar los resultados en los campos correspondientes
-        //tfELS.setText(dF.format(els.Q));
-        //tfSm.setText(dF.format(els.Sm));
-        //tfCT2.setText(dF.format(els.CT));
+        qProduccion.setText(dF.format(els.getQ()));
+        smProduccion.setText(dF.format(els.getSm()));
+        costoAnualProduccion.setText(dF.format(els.getCostoAnual()));
+        costoUnitarioProduccion.setText(dF.format(els.getCostoUnitario()));
 
-        //tfT2.setText(dF.format(els.t));
-        //tft1.setText(dF.format(els.t1));
-        //tft2.setText(dF.format(els.t2));
+        tProduccion.setText(dF.format(els.getT()));
+        t1Produccion.setText(dF.format(els.getT1()));
+        t2Produccion.setText(dF.format(els.getT2()));
 
-    }//GEN-LAST:event_btnCal2ActionPerformed
+    }//GEN-LAST:event_btnCalcularProduccionActionPerformed
 
     private void cbH2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbH2ActionPerformed
         switch (cbH2.getSelectedIndex()) {
             case 0:
-                //tH = 1;
+                tH = TipoTiempo.DIARIO;
                 break;
 
             case 4:
-                //tH = 2;
+                tH = TipoTiempo.ANUAL;
                 break;
             default:
                 //tD = 1;
@@ -1467,7 +1483,7 @@ public class Inventarios extends javax.swing.JFrame {
         }
 
         // Validacion para EOQ con CPOQ
-        if (demandaVariable.isSelected()) {
+        /*if (demandaVariable.isSelected()) {
 
             if (tfQ.getText().isEmpty() || tfL.getText().isEmpty() || tfZ.getText().isEmpty()
                     || tfSigma.getText().isEmpty()
@@ -1486,7 +1502,7 @@ public class Inventarios extends javax.swing.JFrame {
                 }
             }
 
-        }
+        }*/
 
         if (!demandaVariable.isSelected()) {
 
@@ -1513,7 +1529,7 @@ public class Inventarios extends javax.swing.JFrame {
             Double sigTx = Double.parseDouble(tfSigma.getText());
             Double tTx = Double.parseDouble(tfT.getText());
 
-            eoq = new EOQ(qTx, lTx, zTx, sigTx, tTx);
+            eoq = new EOQ(qTx, lTx, zTx, sigTx, tTx, tD, tH);
 
             tfPOQ.setText(dF.format(eoq.getQ()));
             tfPuntoReorden.setText(dF.format(eoq.getPuntoReorden()));
@@ -1624,9 +1640,9 @@ public class Inventarios extends javax.swing.JFrame {
             Descuento desc = new Descuento(dTx, sTx, hTx, c1Tx, c2Tx, qTx, q1Tx);
 
             tfPOQDes.setText(dF.format(desc.Qm));
-            tfCT33.setText(dF.format(desc.CTm));
+            tfCT33.setText(dF.format(desc.costoTotal));
             tfQ3.setText(dF.format(desc.q));
-            tfCT34.setText(dF.format(desc.CTi1));
+            tfCT34.setText(dF.format(desc.costoTotalConDescuento1));
             tfqDes.setText(dF.format(desc.q1));
             tfZona.setText(dF.format(desc.zona));
 
@@ -1638,14 +1654,14 @@ public class Inventarios extends javax.swing.JFrame {
             double c1Tx = Double.parseDouble(tfC1.getText());
             double c2Tx = Double.parseDouble(tfC2.getText());
             int qTx = Integer.parseInt(tfq.getText());
-            // int q1Tx = Integer.parseInt(tfq1.getText());
+            int q1Tx = Integer.parseInt(tfq1.getText());
 
             Descuento desc = new Descuento(dTx, sTx, hTx, c1Tx, c2Tx, qTx);
 
             tfPOQDes.setText(dF.format(desc.Qm));
-            tfCT33.setText(dF.format(desc.CTm));
+            tfCT33.setText(dF.format(desc.costoTotal));
             tfQ3.setText(dF.format(desc.q));
-            tfCT34.setText(dF.format(desc.CTi1));
+            tfCT34.setText(dF.format(desc.costoTotalConDescuento1));
 
             tfqDes.setText(dF.format(desc.q1));
             tfZona.setText(dF.format(desc.zona));
@@ -1679,9 +1695,13 @@ public class Inventarios extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tfCostoUnitarioActionPerformed
 
+    private void costoUnitarioProduccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_costoUnitarioProduccionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_costoUnitarioProduccionActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCal2;
     private javax.swing.JButton btnCalcularCompra;
+    private javax.swing.JButton btnCalcularProduccion;
     private javax.swing.JButton btnCalculate2;
     private javax.swing.JButton btnCls;
     private javax.swing.JButton btnCls2;
@@ -1693,6 +1713,8 @@ public class Inventarios extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbH2;
     private javax.swing.JComboBox<String> cbH3;
     private javax.swing.JCheckBox cbQ;
+    private javax.swing.JTextField costoAnualProduccion;
+    private javax.swing.JTextField costoUnitarioProduccion;
     private javax.swing.JCheckBox demandaVariable;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator4;
@@ -1705,6 +1727,7 @@ public class Inventarios extends javax.swing.JFrame {
     private javax.swing.JLabel jlCT1;
     private javax.swing.JLabel jlCT2;
     private javax.swing.JLabel jlCT3;
+    private javax.swing.JLabel jlCT4;
     private javax.swing.JLabel jlCT6;
     private javax.swing.JLabel jlD;
     private javax.swing.JLabel jlD2;
@@ -1742,11 +1765,15 @@ public class Inventarios extends javax.swing.JFrame {
     private javax.swing.JPanel pEOQ;
     private javax.swing.JPanel pESL;
     private javax.swing.JPanel pPOQ;
+    private javax.swing.JTextField qProduccion;
+    private javax.swing.JTextField smProduccion;
+    private javax.swing.JTextField t1Produccion;
+    private javax.swing.JTextField t2Produccion;
+    private javax.swing.JTextField tProduccion;
     private javax.swing.JTextField tfA;
     private javax.swing.JTextField tfB;
     private javax.swing.JTextField tfC1;
     private javax.swing.JTextField tfC2;
-    private javax.swing.JTextField tfCT2;
     private javax.swing.JTextField tfCT33;
     private javax.swing.JTextField tfCT34;
     private javax.swing.JTextField tfCostoAnual;
@@ -1754,7 +1781,6 @@ public class Inventarios extends javax.swing.JFrame {
     private javax.swing.JTextField tfD;
     private javax.swing.JTextField tfD2;
     private javax.swing.JTextField tfD3;
-    private javax.swing.JTextField tfELS;
     private javax.swing.JTextField tfH;
     private javax.swing.JTextField tfH2;
     private javax.swing.JTextField tfH3;
@@ -1770,16 +1796,12 @@ public class Inventarios extends javax.swing.JFrame {
     private javax.swing.JTextField tfS9;
     private javax.swing.JTextField tfSigma;
     private javax.swing.JTextField tfSigmaL;
-    private javax.swing.JTextField tfSm;
     private javax.swing.JTextField tfT;
-    private javax.swing.JTextField tfT2;
     private javax.swing.JTextField tfZ;
     private javax.swing.JTextField tfZona;
     private javax.swing.JTextField tfn;
     private javax.swing.JTextField tfq;
     private javax.swing.JTextField tfq1;
     private javax.swing.JTextField tfqDes;
-    private javax.swing.JTextField tft1;
-    private javax.swing.JTextField tft2;
     // End of variables declaration//GEN-END:variables
 }
