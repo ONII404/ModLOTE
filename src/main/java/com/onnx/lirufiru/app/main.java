@@ -1,7 +1,8 @@
 package com.onnx.lirufiru.app;
 
 import com.formdev.flatlaf.FlatDarkLaf;
-import com.onnx.lirufiru.app.components.GUI;
+import com.onnx.lirufiru.app.components.Inventarios;
+import com.onnx.lirufiru.app.components.Servidores;
 
 public class main {
 
@@ -14,9 +15,11 @@ public class main {
 
     public static void createAndShowGUI() {
 
-        GUI gui = new GUI();
-        gui.setVisible(true);
+        Inventarios inventarios = new Inventarios();
+        inventarios.setVisible(true);
 
+        Servidores servidores = new Servidores();
+        servidores.setVisible(true);
     }
 
 }
