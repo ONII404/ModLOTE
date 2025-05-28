@@ -46,6 +46,7 @@ public class Servidores extends javax.swing.JFrame {
         jlRho1 = new javax.swing.JLabel();
         rho_UnServidor = new javax.swing.JTextField();
         costoTotalUnitario_UnServidor = new javax.swing.JTextField();
+        jlCT2 = new javax.swing.JLabel();
         calcularUnServidor = new javax.swing.JButton();
         jllam1 = new javax.swing.JLabel();
         tflam1 = new javax.swing.JTextField();
@@ -62,7 +63,6 @@ public class Servidores extends javax.swing.JFrame {
         jlmu2 = new javax.swing.JLabel();
         tfmu2 = new javax.swing.JTextField();
         jpPOQ5 = new javax.swing.JPanel();
-        btnCls4 = new javax.swing.JButton();
         jSeparator6 = new javax.swing.JSeparator();
         tfL2 = new javax.swing.JTextField();
         jlLq2 = new javax.swing.JLabel();
@@ -88,6 +88,7 @@ public class Servidores extends javax.swing.JFrame {
         tfC_S2 = new javax.swing.JTextField();
         jls = new javax.swing.JLabel();
         tfls1 = new javax.swing.JTextField();
+        btnCls4 = new javax.swing.JButton();
         pFuenteFinita = new javax.swing.JPanel();
         tfN1 = new javax.swing.JTextField();
         btnCalculate5 = new javax.swing.JButton();
@@ -171,7 +172,7 @@ public class Servidores extends javax.swing.JFrame {
             }
         });
 
-        jlCT1.setText("Costo total:");
+        jlCT1.setText("Costo Anual:");
 
         jlP01.setText("P0:");
 
@@ -211,16 +212,18 @@ public class Servidores extends javax.swing.JFrame {
             }
         });
 
+        jlCT2.setText("Costo Diario");
+
         javax.swing.GroupLayout jpPOQ2Layout = new javax.swing.GroupLayout(jpPOQ2);
         jpPOQ2.setLayout(jpPOQ2Layout);
         jpPOQ2Layout.setHorizontalGroup(
             jpPOQ2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpPOQ2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(14, 14, 14)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jpPOQ2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jpPOQ2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
                         .addGroup(jpPOQ2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jlW1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jlLq1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -228,7 +231,8 @@ public class Servidores extends javax.swing.JFrame {
                             .addComponent(jlP01, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jlL1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jlCT1, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jlWq1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jlWq1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlCT2, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addGap(18, 18, 18)
                         .addGroup(jpPOQ2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jpPOQ2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -240,8 +244,8 @@ public class Servidores extends javax.swing.JFrame {
                                 .addComponent(p0_UnServidor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(rho_UnServidor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(costoTotalUnitario_UnServidor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpPOQ2Layout.createSequentialGroup()
+                        .addContainerGap(31, Short.MAX_VALUE))
+                    .addGroup(jpPOQ2Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnCls1)
                         .addGap(60, 60, 60))))
@@ -281,7 +285,9 @@ public class Servidores extends javax.swing.JFrame {
                             .addComponent(costoTotal_UnServidor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jlCT1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(costoTotalUnitario_UnServidor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jpPOQ2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(costoTotalUnitario_UnServidor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlCT2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
                 .addComponent(btnCls1)
                 .addContainerGap(45, Short.MAX_VALUE))
@@ -357,7 +363,7 @@ public class Servidores extends javax.swing.JFrame {
                                     .addComponent(tflam1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(tfC_W1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(tfC_S1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE))
                     .addGroup(pUnServidorLayout.createSequentialGroup()
                         .addGap(77, 77, 77)
                         .addComponent(calcularUnServidor)
@@ -400,33 +406,26 @@ public class Servidores extends javax.swing.JFrame {
 
         jllam2.setText("Lamda:");
 
-        tflam2.setPreferredSize(new java.awt.Dimension(70, 25));
+        tflam2.setPreferredSize(new java.awt.Dimension(90, 25));
         tflam2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tflam2ActionPerformed(evt);
             }
         });
 
-        jlmu2.setText("     μ:");
+        jlmu2.setText("μ:");
 
-        tfmu2.setPreferredSize(new java.awt.Dimension(70, 25));
+        tfmu2.setPreferredSize(new java.awt.Dimension(90, 25));
         tfmu2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfmu2ActionPerformed(evt);
             }
         });
 
-        btnCls4.setText("Limpiar");
-        btnCls4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCls4ActionPerformed(evt);
-            }
-        });
-
         jSeparator6.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
         tfL2.setEditable(false);
-        tfL2.setPreferredSize(new java.awt.Dimension(70, 25));
+        tfL2.setPreferredSize(new java.awt.Dimension(90, 25));
         tfL2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfL2ActionPerformed(evt);
@@ -436,7 +435,7 @@ public class Servidores extends javax.swing.JFrame {
         jlLq2.setText("Lq:");
 
         tfLq2.setEditable(false);
-        tfLq2.setPreferredSize(new java.awt.Dimension(70, 25));
+        tfLq2.setPreferredSize(new java.awt.Dimension(90, 25));
         tfLq2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfLq2ActionPerformed(evt);
@@ -446,7 +445,7 @@ public class Servidores extends javax.swing.JFrame {
         jlW2.setText("W:");
 
         tfW2.setEditable(false);
-        tfW2.setPreferredSize(new java.awt.Dimension(70, 25));
+        tfW2.setPreferredSize(new java.awt.Dimension(90, 25));
         tfW2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfW2ActionPerformed(evt);
@@ -456,7 +455,7 @@ public class Servidores extends javax.swing.JFrame {
         jlWq2.setText("Wq:");
 
         tfWq2.setEditable(false);
-        tfWq2.setPreferredSize(new java.awt.Dimension(70, 25));
+        tfWq2.setPreferredSize(new java.awt.Dimension(90, 25));
         tfWq2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfWq2ActionPerformed(evt);
@@ -468,7 +467,7 @@ public class Servidores extends javax.swing.JFrame {
         jlP2.setText("P0:");
 
         tfCT4.setEditable(false);
-        tfCT4.setPreferredSize(new java.awt.Dimension(70, 25));
+        tfCT4.setPreferredSize(new java.awt.Dimension(90, 25));
         tfCT4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfCT4ActionPerformed(evt);
@@ -476,7 +475,7 @@ public class Servidores extends javax.swing.JFrame {
         });
 
         tfP2.setEditable(false);
-        tfP2.setPreferredSize(new java.awt.Dimension(70, 25));
+        tfP2.setPreferredSize(new java.awt.Dimension(90, 25));
         tfP2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfP2ActionPerformed(evt);
@@ -488,7 +487,7 @@ public class Servidores extends javax.swing.JFrame {
         jlRho2.setText("Rho:");
 
         tfRho2.setEditable(false);
-        tfRho2.setPreferredSize(new java.awt.Dimension(70, 25));
+        tfRho2.setPreferredSize(new java.awt.Dimension(90, 25));
         tfRho2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfRho2ActionPerformed(evt);
@@ -496,7 +495,7 @@ public class Servidores extends javax.swing.JFrame {
         });
 
         tfCET1.setEditable(false);
-        tfCET1.setPreferredSize(new java.awt.Dimension(70, 25));
+        tfCET1.setPreferredSize(new java.awt.Dimension(90, 25));
         tfCET1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfCET1ActionPerformed(evt);
@@ -506,7 +505,7 @@ public class Servidores extends javax.swing.JFrame {
         jlCET1.setText("C_E_T:");
 
         tfCST1.setEditable(false);
-        tfCST1.setPreferredSize(new java.awt.Dimension(70, 25));
+        tfCST1.setPreferredSize(new java.awt.Dimension(90, 25));
         tfCST1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfCST1ActionPerformed(evt);
@@ -520,51 +519,39 @@ public class Servidores extends javax.swing.JFrame {
         jpPOQ5Layout.setHorizontalGroup(
             jpPOQ5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpPOQ5Layout.createSequentialGroup()
-                .addContainerGap(21, Short.MAX_VALUE)
+                .addContainerGap(27, Short.MAX_VALUE)
                 .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jpPOQ5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpPOQ5Layout.createSequentialGroup()
-                        .addGroup(jpPOQ5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jpPOQ5Layout.createSequentialGroup()
-                                .addComponent(jlCST1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
-                                .addComponent(tfCST1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jpPOQ5Layout.createSequentialGroup()
-                                .addComponent(jlCET1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(tfCET1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jpPOQ5Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addGroup(jpPOQ5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(tfWq2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(tfW2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(tfLq2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(tfL2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(tfP2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jpPOQ5Layout.createSequentialGroup()
-                                .addGroup(jpPOQ5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jlP2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jlL2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jlLq2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jlW2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jlWq2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jpPOQ5Layout.createSequentialGroup()
-                                .addComponent(jlRho2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(tfRho2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(41, 41, 41))
                     .addGroup(jpPOQ5Layout.createSequentialGroup()
                         .addGroup(jpPOQ5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jpPOQ5Layout.createSequentialGroup()
-                                .addGap(71, 71, 71)
-                                .addComponent(btnCls4))
-                            .addGroup(jpPOQ5Layout.createSequentialGroup()
-                                .addComponent(jlCT4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(tfCT4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(jlRho2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlP2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlL2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlLq2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlW2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlWq2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jpPOQ5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpPOQ5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jpPOQ5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(tfLq2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tfL2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tfP2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(tfRho2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(tfWq2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfW2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpPOQ5Layout.createSequentialGroup()
+                        .addGroup(jpPOQ5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlCET1)
+                            .addComponent(jlCST1)
+                            .addComponent(jlCT4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
+                        .addGroup(jpPOQ5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tfCST1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfCET1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfCT4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap())
         );
         jpPOQ5Layout.setVerticalGroup(
             jpPOQ5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -585,19 +572,19 @@ public class Servidores extends javax.swing.JFrame {
                 .addGroup(jpPOQ5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlLq2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfLq2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jpPOQ5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jpPOQ5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jlW2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tfW2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tfW2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jpPOQ5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jpPOQ5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jlWq2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfWq2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addGroup(jpPOQ5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlCET1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfCET1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addGroup(jpPOQ5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlCST1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfCST1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -605,36 +592,41 @@ public class Servidores extends javax.swing.JFrame {
                 .addGroup(jpPOQ5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlCT4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfCT4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnCls4)
-                .addGap(16, 16, 16))
+                .addGap(45, 45, 45))
             .addComponent(jSeparator6)
         );
 
-        jlC_W2.setText("Costo_Espera_Cliente:");
+        jlC_W2.setText("Costo de Espera");
 
-        tfC_W2.setPreferredSize(new java.awt.Dimension(70, 25));
+        tfC_W2.setPreferredSize(new java.awt.Dimension(90, 25));
         tfC_W2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfC_W2ActionPerformed(evt);
             }
         });
 
-        jlC_S2.setText("Costo_Servicio:");
+        jlC_S2.setText("Costo de Servicio:");
 
-        tfC_S2.setPreferredSize(new java.awt.Dimension(70, 25));
+        tfC_S2.setPreferredSize(new java.awt.Dimension(90, 25));
         tfC_S2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfC_S2ActionPerformed(evt);
             }
         });
 
-        jls.setText("     s:");
+        jls.setText("s:");
 
-        tfls1.setPreferredSize(new java.awt.Dimension(70, 25));
+        tfls1.setPreferredSize(new java.awt.Dimension(90, 25));
         tfls1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfls1ActionPerformed(evt);
+            }
+        });
+
+        btnCls4.setText("Limpiar");
+        btnCls4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCls4ActionPerformed(evt);
             }
         });
 
@@ -645,33 +637,34 @@ public class Servidores extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pMultiplesServidoresLayout.createSequentialGroup()
                 .addGroup(pMultiplesServidoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pMultiplesServidoresLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btnCalculate4))
-                    .addGroup(pMultiplesServidoresLayout.createSequentialGroup()
                         .addGap(11, 11, 11)
                         .addGroup(pMultiplesServidoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(pMultiplesServidoresLayout.createSequentialGroup()
-                                .addComponent(jlC_S2, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tfC_S2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jlC_S2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(pMultiplesServidoresLayout.createSequentialGroup()
-                                .addComponent(jlC_W2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tfC_W2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jlC_W2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(pMultiplesServidoresLayout.createSequentialGroup()
-                                .addComponent(jls, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(tfls1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jls, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(pMultiplesServidoresLayout.createSequentialGroup()
+                                .addGroup(pMultiplesServidoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jllam2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jlmu2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(pMultiplesServidoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(tfC_S2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfC_W2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfls1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(pMultiplesServidoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(pMultiplesServidoresLayout.createSequentialGroup()
-                                    .addComponent(jllam2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(tflam2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(pMultiplesServidoresLayout.createSequentialGroup()
-                                    .addComponent(jlmu2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(tfmu2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addComponent(tflam2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(tfmu2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pMultiplesServidoresLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnCalculate4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnCls4)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jpPOQ5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -700,8 +693,10 @@ public class Servidores extends javax.swing.JFrame {
                     .addComponent(jlC_S2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfC_S2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnCalculate4)
-                .addGap(18, 18, 18))
+                .addGroup(pMultiplesServidoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCalculate4)
+                    .addComponent(btnCls4))
+                .addGap(15, 15, 15))
         );
 
         mPanel.addTab("MultiplesServidores", pMultiplesServidores);
@@ -960,7 +955,7 @@ public class Servidores extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pFuenteFinitaLayout.createSequentialGroup()
                 .addGroup(pFuenteFinitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pFuenteFinitaLayout.createSequentialGroup()
-                        .addGap(0, 129, Short.MAX_VALUE)
+                        .addGap(0, 176, Short.MAX_VALUE)
                         .addComponent(btnCalculate5)
                         .addGap(18, 18, 18))
                     .addGroup(pFuenteFinitaLayout.createSequentialGroup()
@@ -1025,7 +1020,7 @@ public class Servidores extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 466, Short.MAX_VALUE)
+            .addComponent(mPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 513, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1226,9 +1221,9 @@ public class Servidores extends javax.swing.JFrame {
         tfLq2.setText("" + dF.format(mS.Lq));
         tfW2.setText("" + dF.format(mS.W));
         tfWq2.setText("" + dF.format(mS.Wq));
-        tfCET1.setText("" + dF.format(mS.Costo_Espera_Diario));
-        tfCST1.setText("" + dF.format(mS.Costo_Servicio_Diario));
-        tfCT4.setText("" + dF.format(mS.Costo_Total));
+        tfCET1.setText("" + dF.format(mS.costoEsperaDiario));
+        tfCST1.setText("" + dF.format(mS.costoServicioDiario));
+        tfCT4.setText("" + dF.format(mS.costoAnual));
     }//GEN-LAST:event_btnCalculate4ActionPerformed
 
     private void tfC_S1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfC_S1ActionPerformed
@@ -1262,8 +1257,8 @@ public class Servidores extends javax.swing.JFrame {
         Lq_UnServidor.setText("" + dF.format(unServidor.getLq()));
         W_UnServidor.setText("" + dF.format(unServidor.getW()));
         Wq_UnServidor.setText("" + dF.format(unServidor.getWq()));
-        costoTotal_UnServidor.setText("" + dF.format(unServidor.getCostoTotal()));
-        costoTotalUnitario_UnServidor.setText("" + dF.format(unServidor.getCostoTotalUnitario()));
+        costoTotal_UnServidor.setText("" + dF.format(unServidor.getCostoAnual()));
+        costoTotalUnitario_UnServidor.setText("" + dF.format(unServidor.getCostoDiario()));
         // TODO add your handling code here:
     }//GEN-LAST:event_calcularUnServidorActionPerformed
 
@@ -1308,6 +1303,7 @@ public class Servidores extends javax.swing.JFrame {
         W_UnServidor.setText("");
         Wq_UnServidor.setText("");
         costoTotal_UnServidor.setText("");
+        costoTotalUnitario_UnServidor.setText("");
     }//GEN-LAST:event_btnCls1ActionPerformed
 
     private void costoTotalUnitario_UnServidorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_costoTotalUnitario_UnServidorActionPerformed
@@ -1335,6 +1331,7 @@ public class Servidores extends javax.swing.JFrame {
     private javax.swing.JLabel jlCST1;
     private javax.swing.JLabel jlCST2;
     private javax.swing.JLabel jlCT1;
+    private javax.swing.JLabel jlCT2;
     private javax.swing.JLabel jlCT4;
     private javax.swing.JLabel jlCT5;
     private javax.swing.JLabel jlC_S1;

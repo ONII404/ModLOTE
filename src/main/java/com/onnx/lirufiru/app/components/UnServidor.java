@@ -11,7 +11,7 @@ package com.onnx.lirufiru.app.components;
 public class UnServidor {
     // Variables a utilizar
     private final double lam, miu, costoEspera, costoServicio;
-    private double rho, P0, L, Lq, W, Wq, costoTotal, costoTotalUnitario;
+    private double rho, P0, L, Lq, W, Wq, costoAnual, costoDiario;
 
     /**
      * Modela un sistema de colas M/M/1 con un único servidor.
@@ -28,7 +28,6 @@ public class UnServidor {
         this.costoServicio = cServicio; // Costo del servicio
 
         calcularMetricas();
-        mostrarResultados();
     }
 
     private void calcularMetricas() {
@@ -38,25 +37,8 @@ public class UnServidor {
         Lq = rho * L;
         W = 1 / (miu - lam);
         Wq = rho * W;
-        costoTotal = Lq * costoEspera + costoServicio;
-        costoTotalUnitario = costoTotal / L;
-    }
-
-    // Mostrar Resultados UnServidor
-    private void mostrarResultados() {
-        System.out.println("Resultados del sistema M/M/1:");
-        System.out.println("Tasa de llegada (λ): " + lam);
-        System.out.println("Tasa de servicio (μ): " + miu);
-        System.out.println("Costo de espera por cliente/tiempo: " + costoEspera);
-        System.out.println("Costo de servicio por servidor/tiempo: " + costoServicio);
-        System.out.println("Tasa de utilización (ρ): " + rho);
-        System.out.println("Probabilidad de vacío (P0): " + P0);
-        System.out.println("Número promedio de clientes en el sistema (L): " + L);
-        System.out.println("Número promedio de clientes en la cola (Lq): " + Lq);
-        System.out.println("Tiempo promedio en el sistema (W): " + W);
-        System.out.println("Tiempo promedio en la cola (Wq): " + Wq);
-        System.out.println("Costo Total del sistema: " + costoTotal);
-        System.out.println("Costo Total Unitario: " + costoTotalUnitario);
+        costoAnual = Lq * costoEspera + costoServicio;
+        costoDiario = costoAnual / 365;
     }
 
     // Getters para acceder a las métricas calculadas
@@ -84,12 +66,12 @@ public class UnServidor {
         return Wq;
     }
 
-    public double getCostoTotal() {
-        return costoTotal;
+    public double getCostoAnual() {
+        return costoAnual;
     }
 
-    public double getCostoTotalUnitario() {
-        return costoTotalUnitario;
+    public double getCostoDiario() {
+        return costoDiario;
     }
 
 }
