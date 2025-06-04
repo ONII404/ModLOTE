@@ -1938,48 +1938,49 @@ public class Inventarios extends javax.swing.JFrame {
 
     private void btnCalcularCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularCompraActionPerformed
 
-        EOQ eoq;
+        EOQ compra;
+
+        Double D = Double.parseDouble(tfD.getText());
+        Double S = Double.parseDouble(tfS.getText());
+        Double H = Double.parseDouble(tfH.getText());
+        Double L = Double.parseDouble(tfL.getText());
 
         // Si demanda variable NO esta seleccionada
         if (!demandaVariable.isSelected()) {
 
-            Double D = Double.parseDouble(tfD.getText());
-            Double S = Double.parseDouble(tfS.getText());
-            Double H = Double.parseDouble(tfH.getText());
-            Double L = Double.parseDouble(tfL.getText());
+            compra = new EOQ(D, tD, S, H, tH, L);
 
-            eoq = new EOQ(D, tD, S, H, tH, L);
+            tfPOQ.setText(dF.format(compra.getQ()));
+            tfCostoAnual.setText(dF.format(compra.getCosteAnual()));
+            tfPuntoReorden.setText(dF.format(compra.getPuntoReorden()));
+            tfCostoUnitario.setText(dF.format(compra.getCosteUnitario()));
 
-            tfPOQ.setText(dF.format(eoq.getQ()));
-            tfCostoAnual.setText(dF.format(eoq.getCosteAnual()));
-            tfPuntoReorden.setText(dF.format(eoq.getPuntoReorden()));
-            tfCostoUnitario.setText(dF.format(eoq.getCosteUnitario()));
-
-            tfN.setText(dF.format(eoq.getN()));
-            tfn.setText("" + eoq.getn());
+            tfN.setText(dF.format(compra.getN()));
+            tfn.setText("" + compra.getn());
 
         } else {
             // Si demanda variable esta seleccionada
 
-            Double D = Double.parseDouble(tfD.getText());
-            Double S = Double.parseDouble(tfS.getText());
-            Double H = Double.parseDouble(tfH.getText());
-            Double L = Double.parseDouble(tfL.getText());
             Double z = Double.parseDouble(tfZ.getText());
             Double sigma = Double.parseDouble(tfSigma.getText());
-            Double t = Double.parseDouble(tfT.getText());
+            if (cbQ.isSelected()) {
+                Double Q = Double.parseDouble(this.tfQ.getText());
+                Double t = Double.parseDouble(tfT.getText());
+            }
 
-            eoq = new EOQ(D, tD, S, H, tH, L, z, sigma);
+            compra = new EOQ(D, tD, S, H, tH, L, z, sigma);
 
-            tfPOQ.setText(dF.format(eoq.getQ()));
-            tfPuntoReorden.setText(dF.format(eoq.getPuntoReorden()));
-            tfCostoAnual.setText(dF.format(eoq.getCosteAnual()));
-            tfCostoUnitario.setText(dF.format(eoq.getCosteUnitario()));
+            tfPOQ.setText(dF.format(compra.getQ()));
+            tfPuntoReorden.setText(dF.format(compra.getPuntoReorden()));
+            tfCostoAnual.setText(dF.format(compra.getCosteAnual()));
+            tfCostoUnitario.setText(dF.format(compra.getCosteUnitario()));
 
-            tfB.setText(dF.format(eoq.getB()));
-            tfN.setText(dF.format(eoq.getN()));
-            tfn.setText("" + eoq.getn());
-            tfSigmaL.setText(dF.format(eoq.getSigmaL()));
+            tfB.setText(dF.format(compra.getB()));
+            tfN.setText(dF.format(compra.getN()));
+            tfn.setText("" + compra.getn());
+            tfSigmaL.setText(dF.format(compra.getSigmaL()));
+
+            System.out.println("n: " + compra.getNcompleto());
 
         }
     }//GEN-LAST:event_btnCalcularCompraActionPerformed
@@ -2184,14 +2185,14 @@ public class Inventarios extends javax.swing.JFrame {
         P = Double.parseDouble(pEscases.getText());
 
         Escases escases = new Escases(D, S, H, I, C, P);
-        
+
         qEscases.setText("" + dF.format(escases.Q));
         smEscases.setText("" + dF.format(escases.sm));
         wEscases.setText("" + dF.format(escases.W));
-        
+
         costoAnualEscases.setText("" + dF.format(escases.costoAunal));
         costoDiarioEscases.setText("" + dF.format(escases.costoDiario));
-        
+
         tEscases.setText("" + dF.format(escases.t));
         t1Escases.setText("" + dF.format(escases.t1));
         t2Escases.setText("" + dF.format(escases.t2));
@@ -2199,19 +2200,19 @@ public class Inventarios extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCalcularEscasesActionPerformed
 
     private void btnClsEscasesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClsEscasesActionPerformed
-        
-        qEscases.setText("" );
+
+        qEscases.setText("");
         smEscases.setText("");
         wEscases.setText("");
-        
+
         costoAnualEscases.setText("");
         costoDiarioEscases.setText("");
-        
+
         tEscases.setText("");
         t1Escases.setText("");
         t2Escases.setText("");
-        
-        
+
+
     }//GEN-LAST:event_btnClsEscasesActionPerformed
 
     private void costoAnualEscasesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_costoAnualEscasesActionPerformed

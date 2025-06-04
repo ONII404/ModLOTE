@@ -29,7 +29,7 @@ public class EOQ {
     private double B; // Stock de seguridad (demanda variable)
     private double SigmaL; // Desviación estándar durante tiempo de entrega
     private double costeUnitario;
-    private double N, n, t, L, Z, Sigma;
+    private double N, n, t, L, Z, Sigma, ncompleto;
 
     /**
      * Constructor para calcular el EOQ con demanda constante.
@@ -121,6 +121,7 @@ public class EOQ {
         Q = Math.sqrt((2 * S * D) / H);
         t = Q / d;
         n = Math.floor(L / t);
+        ncompleto = L / t; // Número de pedidos en el tiempo de entrega
         calcularSigmaL();
         B = Z * SigmaL;
         calcularPuntoReorden(TipoDemanda.VARIABLE);
@@ -143,7 +144,7 @@ public class EOQ {
                 if (L > t) {
                     puntoReorden = d * (L - n * t) + B;
                 } else if (L < t) {
-                    puntoReorden = d * L;
+                    puntoReorden = d * L + B;
                 }
                 break;
         }
@@ -225,6 +226,10 @@ public class EOQ {
 
     public double getT() {
         return t;
+    }
+
+    public double getNcompleto() {
+        return ncompleto;
     }
 
 }
