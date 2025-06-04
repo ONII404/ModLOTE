@@ -5,17 +5,17 @@ package com.onnx.lirufiru.app.components;
 public class MultiplesServidores {
 
     //Variables a usar
-    double lam, miu, C_W, C_S;
+    double lam, miu, costoEspera, costoServicio;
     int s;
     double rho, P0, L, Lq, W, Wq, costoEsperaDiario, costoServicioDiario, costoAnual;
 
     //Constructor Multiples Servidores
-    public MultiplesServidores(double lam, double mu, int s, double C_W, double C_S) {
+    public MultiplesServidores(double lam, double mu, int s, double costoEspera, double costoServicio) {
         this.lam = lam;
         this.miu = mu;
         this.s = s;
-        this.C_W = C_W;
-        this.C_S = C_S;
+        this.costoEspera = costoEspera;
+        this.costoServicio = costoServicio;
 
         //Calcular Rho, P0, Lq, L, Wq, W, CostoEsperaDiario, CostoServicioDiario, CT.
         calcularRho();
@@ -66,12 +66,12 @@ public class MultiplesServidores {
 
     //Calcular CostoEsperaDiario
     private void calcularCostoEsperaDiario() {
-        costoEsperaDiario = L * C_W;
+        costoEsperaDiario = L * costoEspera;
     }
 
     //CalcularCostoServicioDiario
     private void calcularCostoServicioDiario() {
-        costoServicioDiario = s * C_S;
+        costoServicioDiario = s * costoServicio;
     }
 
     //Calcular CT

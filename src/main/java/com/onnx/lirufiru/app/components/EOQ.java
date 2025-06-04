@@ -22,9 +22,14 @@ public class EOQ {
      * SigmaL: Desviación estándar de la demanda durante el tiempo de entrega
      */
 
-    private double Q, D, S, H, costeAnual, costeUnitario;
-    private double d, h;
-    private double N, n, t, puntoReorden, L, Z, B, Sigma, SigmaL;
+    private double Q, D, S, H; // Variables básicas EOQ
+    private double d, h; // Valores diarios (demanda y costo)
+    private double costeAnual; // Costo total anual
+    private double puntoReorden; // Nivel para reabastecer
+    private double B; // Stock de seguridad (demanda variable)
+    private double SigmaL; // Desviación estándar durante tiempo de entrega
+    private double costeUnitario;
+    private double N, n, t, L, Z, Sigma;
 
     /**
      * Constructor para calcular el EOQ con demanda constante.
@@ -67,21 +72,12 @@ public class EOQ {
         calcularDemandaConstante();
     }
 
-    /**
-     * Constructor para calcular el EOQ con demanda variable.
-     *
-     * @param Q     Cantidad óptima de pedido.
-     * @param L     Tiempo de entrega en días.
-     * @param Z     Nivel de servicio (número de desviaciones estándar).
-     * @param Sigma Desviación estándar de la demanda diaria.
-     * @param t     Tiempo de ciclo (en días).
-     */
-    public EOQ(double Q, double L, double Z, double Sigma, double t, TipoTiempo tipoCostoD, TipoTiempo tipoCostoH) {
+    public EOQ(double D, TipoTiempo tipoCostoD, double S, double H, TipoTiempo tipoCostoH, double L, double Z,
+            double Sigma) {
 
-        this.Q = Q;
+        this.S = S;
         this.L = L;
         this.Z = Z;
-        this.t = t;
         this.Sigma = Sigma;
 
         // Seteo de D y d
@@ -123,6 +119,7 @@ public class EOQ {
 
     private void calcularDemandaVariable() {
         Q = Math.sqrt((2 * S * D) / H);
+        t = Q / d;
         n = Math.floor(L / t);
         calcularSigmaL();
         B = Z * SigmaL;
@@ -130,7 +127,6 @@ public class EOQ {
         N = D / Q;
         costeAnual = (D / Q) * S + (Q / 2) * H;
         costeUnitario = (d / Q) * S + (Q / 2) * h;
-        Q += B;
     }
 
     // Calcular el punto de reorden
@@ -139,15 +135,15 @@ public class EOQ {
             case CONSTANTE:
                 if (L > t) {
                     puntoReorden = d * (L - (n * t));
-                } else {
+                } else if (L < t) {
                     puntoReorden = d * L;
                 }
                 break;
             case VARIABLE:
                 if (L > t) {
                     puntoReorden = d * (L - n * t) + B;
-                } else {
-                    puntoReorden = d * L + B;
+                } else if (L < t) {
+                    puntoReorden = d * L;
                 }
                 break;
         }
@@ -157,7 +153,7 @@ public class EOQ {
     private void calcularSigmaL() {
         if (L > t) {
             this.SigmaL = Math.sqrt((L - (n * t)) * Math.pow(Sigma, 2));
-        } else {
+        } else if (L < t) {
             this.SigmaL = Math.sqrt(L * Math.pow(Sigma, 2));
         }
     }

@@ -1,12 +1,13 @@
 package com.onnx.lirufiru.app.components;
 
-import java.text.DecimalFormat;
-import java.util.ArrayList;
-
 public class Descuento {
 
     // Variables de entrada
-    public double S, C1, C2, Qm, Qi, q1, q1_1, q1_2, costoTotal, costoTotalConDescuento1, costoTotalConDescuento2;
+    public double S, C1, C2, Qm, Qi, q1, q1_1, q1_2;
+
+    // Variables
+    public double costoAnual, costoDiario, costoAnualDescuento1, costoAnualDescuento2, costoDiarioDescuento1,
+            costoDiarioDescuento2;
     // Variables Diarias
     public double d, h;
     // Variables Anuales
@@ -108,18 +109,30 @@ public class Descuento {
         Qm = Math.sqrt(((2 * S * D) / H));
     }
 
+    /*
+     * Calcualar costos
+     * 
+     * Costo sin descuento: Anual y diario
+     * Costo con descuento: Anual y diario
+     * Costo 2 con descuento: Anual y diario
+     * 
+     */
+
     // Calculo de la cantidad optima de pedido sin descuento
     void calCostoTotal(double P) {
-        costoTotal = (S * D / Qm) + (H * Qm / 2) + (P * D);
+        costoAnual = (S * D / Qm) + (H * Qm / 2) + (P * D);
+        costoDiario = (S * d / Qm) + (h * Qm / 2) + (P * d);
     }
 
     // Calculo de la cantidad optima de pedido con descuento
     void calCostoTotalDescuento1(double P, double Qi) {
-        costoTotalConDescuento1 = ((S * D / Qi) + (H * Qi / 2) + (P * D));
+        costoAnualDescuento1 = ((S * D / Qi) + (H * Qi / 2) + (P * D));
+        costoDiarioDescuento1 = ((S * d / Qi) + (h * Qi / 2) + (P * d));
     }
 
     void calCostoTotalDescuento2(double P, double Qi) {
-        costoTotalConDescuento2 = ((S * D / Qi) + (H * Qi / 2) + (P * D));
+        costoAnualDescuento2 = ((S * D / Qi) + (H * Qi / 2) + (P * D));
+        costoDiarioDescuento2 = ((S * d / Qi) + (h * Qi / 2) + (P * d));
     }
 
     // Calculo de q1 o Q*
